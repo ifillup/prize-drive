@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\LootBox;
+use App\Product;
+use App\Prize;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -13,6 +15,7 @@ class LootBoxController extends Controller
         $data = request()->validate([
             'name' => 'required',
             'description' => 'required',
+            'price' => 'required',
             'image' => ['required', 'image']
 
         ]);
@@ -23,7 +26,7 @@ class LootBoxController extends Controller
 
         $lootBox = new LootBox([
             'name' => $data['name'],
-
+            'price' => $data['price'],
             'description' => $data['description'],
             'image' => $imagePath
 
@@ -32,10 +35,21 @@ class LootBoxController extends Controller
         $lootBox->save();
         return redirect('/admin/boxes');
     }
+    //returns the brought lootbox
+    public function show($id)
+    {
+
+        $prizes = Prize::where('loot_box_id', '=', $id)->get();
+
+        $prizesArr = $prizes->toArray();
+        $box = $prizes[array_rand($prizesArr)];
+        return redirect('/')->with(compact('box')); //
+    }
     public function index()
     {
 
         $boxes = LootBox::all();
-        return view('admin.boxes', compact('boxes'));
+        $products = Product::all();
+        return view('admin.boxes', compact('boxes', 'products'));
     }
 }

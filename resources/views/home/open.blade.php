@@ -1,0 +1,2 @@
+brought box
+{{session('box')}}

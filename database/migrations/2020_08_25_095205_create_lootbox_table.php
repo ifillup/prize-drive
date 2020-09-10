@@ -19,6 +19,7 @@ class CreateLootboxTable extends Migration
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->string('image')->nullable();
+            $table->decimal('price', 6, 2);
         });
     }
 

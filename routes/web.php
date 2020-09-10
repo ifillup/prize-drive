@@ -18,7 +18,9 @@ Route::get('/admin', 'AdminController@index');
 Route::post('/admin/products', 'ProductController@store');
 Route::get('/admin/products', 'ProductController@index');
 Route::get('/admin/boxes', 'LootboxController@index');
+Route::get('/open/{id}', 'LootboxController@show');
 Route::post('/admin/boxes', 'LootboxController@store');
+Route::post('/admin/add', 'PrizeController@store');
 // Route::get('/admin/boxes', 'AdminController@boxes');
 
 
