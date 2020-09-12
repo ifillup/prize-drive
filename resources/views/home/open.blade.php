@@ -1,2 +1,2 @@
-brought box
-{{session('box')}}
+
+<img src="/storage/{{ session('product')->image }}" >

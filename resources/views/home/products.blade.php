@@ -1,5 +1,5 @@
 
-<div class="d-flex">
+<div class="products-list d-flex">
 @foreach ($products as $product)
     <img src="/storage/{{ $product->image }}" alt="" class="col-2 rounded-circle">
 @endforeach

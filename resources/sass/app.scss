@@ -1,8 +1,34 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.products-list {
+    margin: 2rem;
+}
+.feature {
+    text-align: center;
+    margin: 2rem;
+}
+.card-list {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-list .card {
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+}
+.card-list .card:hover {
+    transform: translateY(-1rem);
+}

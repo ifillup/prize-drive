@@ -53,10 +53,14 @@
         </div>
     </div>
     @include('home.products')
-    @if (session('box'))
-     @include('home.open')
-    @endif
 
+    <div class="feature">
+    @if (session('product'))
+        @include('home.open')
+    @else
+        @include('home.feature')
+    @endif
+</div>
     @include('home.boxes')
 </div>
 
