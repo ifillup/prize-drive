@@ -59,6 +59,12 @@
                                     Top
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">
+                                <i class="fas fa-toolbox"></i>
+                                    Admin
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
