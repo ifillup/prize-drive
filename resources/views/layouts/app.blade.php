@@ -90,6 +90,11 @@
                                         @csrf
                                     </form>
                                 </div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/admin">
+                                     Admin
+                                 </a>
+                                </div>
                             </li>
                         @endguest
                     </ul>
