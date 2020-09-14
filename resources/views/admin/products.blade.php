@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="container">
-    <form action="{{ url('/admin/products') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
 

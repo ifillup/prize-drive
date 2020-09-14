@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="d-flex justify-content-between">
-<form action="{{ url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
+<form action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Create LootBox</h4>
     <div class="form-group">
@@ -22,7 +22,7 @@
     <input type="submit" value="Create" class="btn btn-primary" />
 </div>
 </form>
-<form action="{{ url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
+<form action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Add a Prize</h4>
     <label for="loot_box_id">Choose a Box:</label>
@@ -56,7 +56,7 @@
 <h5>Cost: ${{$box->cost()}}<h5>
     <div class="d-flex">
         <div >
-            <img class="col-10"  src="{{url('storage/'.$box->image)}}" >
+            <img class="col-10"  src="{{secure_url('storage/'.$box->image)}}" >
         </div>
         <div class="">
             <ul>

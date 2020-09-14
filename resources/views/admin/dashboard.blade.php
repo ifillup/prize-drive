@@ -16,19 +16,19 @@
             <ul class="nav flex-column">
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
+              <a class="nav-link" href="{{secure_url('/admin')}}">
                   <span data-feather="file"></span>
                   Users
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/admin/products') }}">
+                <a class="nav-link" href="{{ secure_url('/admin/products') }}">
                   <span data-feather="shopping-cart"></span>
                   Products
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/admin/boxes') }}">
+                <a class="nav-link" href="{{ secure_url('/admin/boxes') }}">
                   <span data-feather="users"></span>
                   Boxes
                 </a>
