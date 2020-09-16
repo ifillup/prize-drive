@@ -1,2 +1,2 @@
 
-<img src="/storage/{{ session('product')->image }}" >
+<img src="{{env('AWS_URL').'/'. session('product')->image }}" >
