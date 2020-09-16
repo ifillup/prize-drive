@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
 
@@ -20,17 +21,17 @@ class ProductController extends Controller
             'image' => ['required', 'image']
         ]);
 
+        $image = Image::make(request('image'))->fit(400, 400)->encode('jpg');
 
-        $imagePath = request('image')->store('/uploads', 'public');
+        $filePath = 'uploads/' . uniqid('prod') . '.jpg';
+        Storage::disk('s3')->put($filePath, $image);
 
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400);
-        $image->save();
 
         $product = new Product([
             'name' => $data['name'],
             'cost' => $data['cost'],
             'description' => $data['description'],
-            'image' => $imagePath
+            'image' => $filePath
         ]);
 
         $product->save();
