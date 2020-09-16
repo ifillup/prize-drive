@@ -23,6 +23,7 @@ class LootBoxController extends Controller
 
         $imagePath = request('image')->store('/uploads', 'public');
 
+        dd(public_path("storage/{$imagePath}"));
 
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400)->save();
         //dd($image);
