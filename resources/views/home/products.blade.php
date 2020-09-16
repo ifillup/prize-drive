@@ -1,7 +1,7 @@
 
 <div class="products-list d-flex">
 @foreach ($products as $product)
-    <img src="/storage/{{ $product->image }}" alt="" class="col-2 rounded-circle">
+    <img src="{{env('AWS_URL/'). $product->image }}" alt="" class="col-2 rounded-circle">
 @endforeach
 </div>
     {{--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
