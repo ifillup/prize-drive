@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ url('login') }}">
+                    <form method="POST" action="{{ secure_url('login') }}">
                         @csrf
 
                         <div class="form-group row">
