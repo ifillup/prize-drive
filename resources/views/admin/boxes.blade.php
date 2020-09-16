@@ -56,7 +56,7 @@
 <h5>Cost: ${{$box->cost()}}<h5>
     <div class="d-flex">
         <div >
-            <img class="col-10"  src="{{secure_url('storage/'.$box->image)}}" >
+            <img class="col-10"  src="{{env('AWS_URL') .'/' .$box->image}}" >
         </div>
         <div class="">
             <ul>

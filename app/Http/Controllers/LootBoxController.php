@@ -6,6 +6,7 @@ use App\LootBox;
 use App\Product;
 use App\Prize;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
 class LootBoxController extends Controller
@@ -21,8 +22,16 @@ class LootBoxController extends Controller
         ]);
 
         $imagePath = request('image')->store('/uploads', 'public');
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400);
-        $image->save();
+
+
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400)->save();
+        //dd($image);
+
+        // $image = Image::make(request('image'))->fit(400, 400)->save(env('AWS_URL') . '/uploads/');
+        Storage::disk('s3')->put("/uploads/{$image->basename}", $image);
+        Storage::delete($imagePath);
+
+
 
         $lootBox = new LootBox([
             'name' => $data['name'],
