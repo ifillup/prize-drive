@@ -3,8 +3,7 @@
         width: 400px;
         height: 400px;
     }
-    .rotate
-    {
+    .rotate {
   animation: rotate 1.5s linear infinite;
 }
 @keyframes rotate{
