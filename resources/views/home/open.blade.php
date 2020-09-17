@@ -13,7 +13,7 @@
 
 
 <div class="">
-    <p>Click to open!!!</p>
+    <p id='title'>Click to open!!!</p>
 <img id="open-img" class='rotate' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 </div>
 
@@ -21,6 +21,6 @@
     document.getElementById('open-img').addEventListener('click', (e) => {
         e.target.classList.remove('rotate');
         e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
-        e.target.innerText = "You won a {{session('product')->name}}!!!!"
+        document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
     })
 </script>
