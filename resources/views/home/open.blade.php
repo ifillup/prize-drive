@@ -1,23 +1,25 @@
 <style>
     #open-img {
-        transition: transform 10s;
-
+        width: 400px;
+        height: 400px;
     }
-    #open-img:hover {
-        transform: rotateY(1180deg);
+    .rotate
+    {
+  animation: rotate 1.5s linear infinite;
 }
-    #open-img:active {
-
+@keyframes rotate{
+  to{ transform: rotateY(360deg); }
 }
 </style>
 
 
 
-<img id="open-img" src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
+<img id="open-img" class='rotate' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 
 
 <script>
     document.getElementById('open-img').addEventListener('click', (e) => {
+        e.target.classList.remove('rotate');
         e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
     })
 </script>
