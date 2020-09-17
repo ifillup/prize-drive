@@ -1,5 +1,5 @@
 
-<div class="products-list d-flex">
+<div class="products-list d-flex mb-5">
 @foreach ($products as $product)
     <img src="{{env('AWS_URL').'/'. $product->image }}" alt="" class="col-2 rounded-circle">
 @endforeach
