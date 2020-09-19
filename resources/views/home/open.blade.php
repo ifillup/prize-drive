@@ -20,12 +20,13 @@
 <script>
     document.getElementById('open-img').addEventListener('click', (e) => {
         e.target.classList.remove('rotate');
-        @if (session('product') == 'no prize') {
-            document.getElementById('title').innerText = "You didn't win a prize this time"
-        } else {
-            e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
-        document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
-        }
+        @if (session('product') == 'no prize')
+          document.getElementById('title').innerText = "You didn't win a prize this time"
+        @else
+           e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
+          document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
+        @endif
+
 
     })
 </script>
