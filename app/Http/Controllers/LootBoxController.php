@@ -53,10 +53,16 @@ class LootBoxController extends Controller
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
 
         $prizesArr = $prizes->toArray();
+        dd($prizesArr, $prizes);
+        // foreach()
+        // while (count($prizesArr) < 100) {
+        //     $prizesArr[] = null;
+        // }
 
         $prize = $prizes[array_rand($prizesArr)];
-
-        $product = $prize->product;
+        // $product = 'no prize';
+        // if ($prize != null)
+        //     $product = $prize->product;
         return redirect('/')->with(compact('product'));
     }
     public function index()
