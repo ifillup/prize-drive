@@ -55,6 +55,7 @@ class LootBoxController extends Controller
         $prizesArr = $prizes->toArray();
         $draw = array();
         foreach ($prizesArr as $prize) {
+            dd($prize);
             $count = $prize->percentage;
             while ($count > 0) {
                 $array[] = $prize;
