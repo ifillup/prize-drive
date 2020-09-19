@@ -20,7 +20,12 @@
 <script>
     document.getElementById('open-img').addEventListener('click', (e) => {
         e.target.classList.remove('rotate');
-        e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
+        @if (session('product') == 'no prize') {
+            document.getElementById('title').innerText = "You didn't win a prize this time"
+        } else {
+            e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
         document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
+        }
+
     })
 </script>

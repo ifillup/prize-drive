@@ -65,11 +65,9 @@ class LootBoxController extends Controller
         while (count($draw) < 100) {
             $draw[] = 'no prize';
         }
-        dd($draw);
+
         $prize = $draw[array_rand($draw)];
-        // $product = 'no prize';
-        // if ($prize != null)
-        //     $product = $prize->product;
+
         return redirect('/')->with(compact('product'));
     }
     public function index()
