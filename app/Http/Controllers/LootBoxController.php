@@ -53,12 +53,18 @@ class LootBoxController extends Controller
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
 
         $prizesArr = $prizes->toArray();
-        dd($prizesArr, $prizes);
-        // foreach()
-        // while (count($prizesArr) < 100) {
-        //     $prizesArr[] = null;
-        // }
-
+        $draw = array();
+        foreach ($prizesArr as $prize) {
+            $count = $prize->percentage;
+            while ($count > 0) {
+                $array[] = $prize;
+                $count--;
+            }
+        }
+        while (count($prizesArr) < 100) {
+            $prizesArr[] = null;
+        }
+        dd($draw);
         $prize = $prizes[array_rand($prizesArr)];
         // $product = 'no prize';
         // if ($prize != null)
