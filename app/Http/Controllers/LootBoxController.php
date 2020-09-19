@@ -52,9 +52,9 @@ class LootBoxController extends Controller
 
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
 
-        $prizesArr = $prizes->toArray();
+        // $prizesArr = $prizes->toArray();
         $draw = array();
-        foreach ($prizesArr as $prize) {
+        foreach ($prizes as $prize) {
 
             $count = $prize['percentage'];
             while ($count > 0) {
@@ -67,8 +67,8 @@ class LootBoxController extends Controller
         }
 
         $prize = $draw[array_rand($draw)];
-        $product = $prize->product;
-        dd($product);
+        dd($prize, $prize->product);
+
         return redirect('/')->with(compact('product'));
     }
     public function index()
