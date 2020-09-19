@@ -67,7 +67,7 @@ class LootBoxController extends Controller
         }
 
         $prize = $draw[array_rand($draw)];
-        $product = $prize->product;
+        $product = $prize->product || 'no prize';
 
         return redirect('/')->with(compact('product'));
     }
