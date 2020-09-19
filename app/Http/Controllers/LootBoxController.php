@@ -58,12 +58,12 @@ class LootBoxController extends Controller
 
             $count = $prize['percentage'];
             while ($count > 0) {
-                $array[] = $prize;
+                $draw[] = $prize;
                 $count--;
             }
         }
-        while (count($prizesArr) < 100) {
-            $prizesArr[] = null;
+        while (count($draw) < 100) {
+            $prizesArr[] = 'no prize';
         }
         dd($draw);
         $prize = $prizes[array_rand($prizesArr)];
