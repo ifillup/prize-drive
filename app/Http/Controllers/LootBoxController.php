@@ -63,10 +63,10 @@ class LootBoxController extends Controller
             }
         }
         while (count($draw) < 100) {
-            $prizesArr[] = 'no prize';
+            $draw[] = 'no prize';
         }
         dd($draw);
-        $prize = $prizes[array_rand($prizesArr)];
+        $prize = $draw[array_rand($draw)];
         // $product = 'no prize';
         // if ($prize != null)
         //     $product = $prize->product;
