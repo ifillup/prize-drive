@@ -49,9 +49,9 @@
         transform-origin: top;
     }
 }
-html {
+#title {
+    background-color: white;
 }
-
 body {
     background-color: #d50000;
     background-image: repeating-linear-gradient(
@@ -68,8 +68,9 @@ body {
             transparent 0px,
             transparent 200px
         );
-    display: grid;
+
     height: 100vh;
     margin: 0;
-    place-items: center;
+    // place-items: center;
+    //display: grid;
 }

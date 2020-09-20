@@ -10963,12 +10963,14 @@ a.text-dark:focus {
   }
 }
 
+#title {
+  background-color: white;
+}
+
 body {
   background-color: #d50000;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 100px, transparent 0px, transparent 200px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100px, transparent 0px, transparent 200px);
-  display: grid;
   height: 100vh;
   margin: 0;
-  place-items: center;
 }
 
