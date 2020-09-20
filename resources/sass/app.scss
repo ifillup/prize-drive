@@ -50,6 +50,9 @@
     }
 }
 html {
+}
+
+body {
     background-color: #d50000;
     background-image: repeating-linear-gradient(
             45deg,
@@ -65,9 +68,6 @@ html {
             transparent 0px,
             transparent 200px
         );
-}
-
-body {
     display: grid;
     height: 100vh;
     margin: 0;
