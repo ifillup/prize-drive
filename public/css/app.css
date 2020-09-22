@@ -10954,3 +10954,25 @@ a.text-dark:focus {
   min-height: 100vh;
 }
 
+#open-img {
+  width: 400px;
+  height: 400px;
+}
+
+.rotate {
+  -webkit-animation: rotate 1.5s linear infinite;
+          animation: rotate 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+

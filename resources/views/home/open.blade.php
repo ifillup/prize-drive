@@ -1,15 +1,4 @@
-<style>
-    #open-img {
-        width: 400px;
-        height: 400px;
-    }
-    .rotate {
-  animation: rotate 1.5s linear infinite;
-}
-@keyframes rotate{
-  to{ transform: rotateY(360deg); }
-}
-</style>
+
 
 
 <div class="card">
