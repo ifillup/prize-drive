@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="d-flex justify-content-between">
-<form class='bg-light' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
+<form class='bg-light p-2 rounded' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Create LootBox</h4>
     <div class="form-group">
@@ -22,23 +22,23 @@
     <input type="submit" value="Create" class="btn btn-primary" />
 </div>
 </form>
-<form class='bg-light' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
+<form class='bg-light m-5 p-2 rounded' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Add a Prize</h4>
-    <label for="loot_box_id">Choose a Box:</label>
+    <label for="loot_box_id">Choose a Box</label>
     <select class="custom-select" name="loot_box_id" id="loot_box_id">
         @foreach ($boxes as $box)
         <option value="{{$box->id}}">{{ $box->name}}</option>
         @endforeach
       </select>
-      <label for="product_id">Choose a Product:</label>
+      <label for="product_id">Choose a Product</label>
     <select class="custom-select" name="product_id" id="product_id">
         @foreach ($products as $product)
         <option value="{{$product->id}}">{{ $product->name}}</option>
         @endforeach
       </select>
       <div class="form-group  d-flex justify-content-between mt-2">
-      <label for="product_id">Drop Percentage:</label>
+      <label for="product_id">Drop Percentage</label>
       <input type='number' name='percentage' min='0' max='100'>
     </div>
       <input type="submit" value="Add Item" class="btn btn-primary" />
@@ -47,16 +47,17 @@
 </form>
 
 </div>
-<ol>
+
 
 
 @foreach ($boxes as $box)
-<h5>{{ $box->name}}</h5>
-<h5>Price: ${{$box->price}}<h5>
-<h5>Cost: ${{$box->cost()}}<h5>
+<div class="bg-light m-2 p-2 rounded">
+<h5>{{ $box->name}} | Price: ${{$box->price}} | Cost: ${{$box->cost()}}</h5>
+<h5><h5>
+<h5><h5>
     <div class="d-flex">
         <div >
-            <img class="col-10"  src="{{env('AWS_URL') .'/' .$box->image}}" >
+            <img class="float-left h-50"  src="{{env('AWS_URL') .'/' .$box->image}}" >
         </div>
         <div class="">
             <ul>
@@ -74,10 +75,11 @@
 </div>
 
 </div>
+</div>
 @endforeach
 
 
-</ol>
+
 
 
 @endsection

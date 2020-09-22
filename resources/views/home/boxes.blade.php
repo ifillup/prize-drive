@@ -4,7 +4,7 @@
 
     @foreach($boxes as $box)
     @if ($box->prizes->isNotEmpty())
-        <div class="card bg-secondary" style="width: 18rem;">
+        <div class="card bg-secondary" style="width: 18rem;" >
             <img src="{{env('AWS_URL').'/'.$box->image}}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{$box->name}}</h5>
@@ -18,7 +18,7 @@
 
     @else
 
-    <div class="card bg-secondary" style="width: 18rem;">
+    <div class="card bg-secondary" style="width: 18rem;" >
         <img src="{{env('AWS_URL').'/'.$box->image}}" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{$box->name}}</h5>

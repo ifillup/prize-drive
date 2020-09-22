@@ -1,8 +1,9 @@
 @extends('admin.dashboard')
 
 @section('main')
-<h1 class='bg-light'>Users</h1>
-<table class="table bg-light">
+<h4 class='bg-light rounded m-2'>Users</h4>
+<table class="table table-striped bg-light rounded m-2">
+
     <thead>
       <tr>
 

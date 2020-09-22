@@ -12,7 +12,7 @@
 </style>
 
 
-<div class="">
+<div class="card">
     <p id='title'>Click to open!!!</p>
 <img id="open-img" class='rotate' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 </div>

@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="container">
-    <form class='bg-light' action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
+    <form class='bg-light p-2 rounded' action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
 
@@ -47,18 +47,16 @@
 
 
 
-            {{-- <div class="">
-            <input type="submit" vale="Add Product" class="btn btn-primary" />
-            </div> --}}
+        <input type="submit" value="Add Product" class="btn btn-primary mt-1" />
         </div>
-        <input type="submit" value="Add Product" class="btn btn-primary" />
+
     </form>
-<h2>PRODUCTS</h2>
-<table class="table">
+
+<table class="table bg-light table-striped rounded m-2">
     <thead>
       <tr>
 
-        <th scope="col">Name</th>
+        <th scope="col">Product Name</th>
         <th scope="col">Cost</th>
         <th scope="col">Description</th>
       </tr>
