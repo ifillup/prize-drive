@@ -1,8 +1,8 @@
 @extends('admin.dashboard')
 
 @section('main')
-<div class="d-flex justify-content-between">
-<form class='bg-light p-2 rounded' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
+<div class="d-flex justify-content-start">
+<form class='bg-light p-2 rounded ml-2' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Create LootBox</h4>
     <div class="form-group">
@@ -22,7 +22,7 @@
     <input type="submit" value="Create" class="btn btn-primary" />
 </div>
 </form>
-<form class='bg-light m-5 p-2 rounded' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
+<form class='bg-light m-5 p-2 rounded align-self-start' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Add a Prize</h4>
     <label for="loot_box_id">Choose a Box</label>
@@ -53,14 +53,13 @@
 @foreach ($boxes as $box)
 <div class="bg-light m-2 p-2 rounded">
 <h5>{{ $box->name}} | Price: ${{$box->price}} | Cost: ${{$box->cost()}}</h5>
-<h5><h5>
-<h5><h5>
+
     <div class="d-flex">
         <div >
             <img class="float-left h-50"  src="{{env('AWS_URL') .'/' .$box->image}}" >
         </div>
         <div class="">
-            <ul>
+            {{-- <ul>
 
                     @foreach($box->prizes as $prize)
 
@@ -71,7 +70,29 @@
 
 
 
-            </ul>
+            </ul> --}}
+            <table class="table bg-light table-striped rounded m-2 shadow ">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Drop %</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Cost per box</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @foreach($box->prizes as $prize)
+                    <tr>
+
+                    <td>{{ $prize->product->name}}</td>
+                    <td>{{ $prize->percentage}}</td>
+                    <td>{{ $prize->product->cost}}</td>
+                    <td>{{ $prize->product->cost * ($prize->percentage /100)}}</td>
+
+                  </tr>
+                  @endforeach
+                </tbody>
 </div>
 
 </div>

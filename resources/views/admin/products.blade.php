@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="container">
-    <form class='bg-light p-2 rounded' action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
+    <form class='bg-light p-2 rounded shadow ' action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
 
@@ -52,7 +52,7 @@
 
     </form>
 
-<table class="table bg-light table-striped rounded m-2">
+<table class="table bg-light table-striped rounded m-2 shadow ">
     <thead>
       <tr>
 
