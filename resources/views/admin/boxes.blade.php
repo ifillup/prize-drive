@@ -59,18 +59,9 @@
             <img class="float-left h-50"  src="{{env('AWS_URL') .'/' .$box->image}}" >
         </div>
         <div class="">
-            {{-- <ul>
-
-                    @foreach($box->prizes as $prize)
-
-                    <li> {{ $prize->id}} Product Name:{{ $prize->product->name}} Drop Percentage:{{ $prize->percentage}}</li>
+            @if (isset($box->prizes))
 
 
-                    @endforeach
-
-
-
-            </ul> --}}
             <table class="table bg-light table-striped rounded m-2 shadow ">
                 <thead>
                   <tr>
@@ -93,9 +84,10 @@
                   </tr>
                   @endforeach
                 </tbody>
-</div>
 
-</div>
+            @endif
+        </div>
+        </div>
 </div>
 @endforeach
 
