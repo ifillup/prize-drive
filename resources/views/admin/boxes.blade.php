@@ -1,8 +1,8 @@
 @extends('admin.dashboard')
 
 @section('main')
-<div class="d-flex justify-content-start">
-<form class='bg-light p-2 rounded ml-2' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
+<div class="d-flex align-items-start">
+<form class='bg-light p-2 rounded ml-2 mr-2' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Create LootBox</h4>
     <div class="form-group">
@@ -22,7 +22,7 @@
     <input type="submit" value="Create" class="btn btn-primary" />
 </div>
 </form>
-<form class='bg-light m-5 p-2 rounded align-self-start' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
+<form class='bg-light p-2 rounded ' action="{{ secure_url('/admin/add')}}" method="POST" enctype="multipart/form-data" >
     @csrf
     <h4>Add a Prize</h4>
     <label for="loot_box_id">Choose a Box</label>

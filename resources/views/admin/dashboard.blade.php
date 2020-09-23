@@ -9,7 +9,7 @@
 
   <body>
 
-    <div class="container-fluid">
+
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
@@ -41,11 +41,11 @@
         </nav>
 
 
-        <main class="py-4">
+        <div class="pt-1">
             @yield('main')
-        </main>
 
-      </div>
+        </div>
+
     </div>
 
 
