@@ -2,9 +2,9 @@
 
 @section('content')
 
+<main class="bg-white">
 
-
-      <div class="row">
+      <div class="row ">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -35,14 +35,14 @@
         </nav>
 
 
-        <div class="pt-1">
+        <div class="pt-1 bg-white">
             @yield('main')
 
         </div>
 
     </div>
 
-
+</main>
 
 
 @endsection

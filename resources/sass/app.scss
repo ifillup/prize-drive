@@ -49,6 +49,10 @@
 #app {
     min-height: 100vh;
 }
+main,
+.sidebar {
+    min-height: 100vh;
+}
 body {
     // background-color: darkblue;
     // background-image: repeating-linear-gradient(

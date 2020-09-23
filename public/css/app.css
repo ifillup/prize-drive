@@ -10954,6 +10954,11 @@ a.text-dark:focus {
   min-height: 100vh;
 }
 
+main,
+.sidebar {
+  min-height: 100vh;
+}
+
 #open-img {
   width: 400px;
   height: 400px;
