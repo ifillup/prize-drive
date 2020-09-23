@@ -10,7 +10,7 @@
             <h5 class="card-title">{{$box->name}}</h5>
             <p class="card-text">{{$box->description}}</p>
             <a href="{{url('open/'.$box->id)}}" class="btn btn-primary">BUY ${{$box->price}}</a>
-            {{-- <span id='price'>${{$box->price}}</span> --}}
+
             </div>
         </div>
 
