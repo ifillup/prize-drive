@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+
+        <a class="navbar-brand ml-4" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
@@ -34,12 +34,7 @@
                             Top
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{secure_url('/admin')}}">
-                        <i class="fas fa-toolbox"></i>
-                            Admin
-                    </a>
-                </li>
+
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -73,7 +68,12 @@
                         </div>
 
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{secure_url('/admin')}}">
 
+                                Admin
+                        </a>
+                    </li>
                 @endguest
             </ul>
         </div>

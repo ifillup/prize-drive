@@ -20,7 +20,9 @@ Route::get('/admin', 'AdminController@index');
 Route::post('/admin/products', 'ProductController@store');
 Route::get('/admin/products', 'ProductController@index');
 Route::get('/admin/boxes', 'LootBoxController@index');
-Route::get('/open/{id}', 'LootBoxController@show');
+Route::get('/show/{id}', 'LootBoxController@show');
+
+Route::get('/open/{id}', 'LootBoxController@open');
 Route::post('/admin/boxes', 'LootBoxController@store');
 Route::post('/admin/add', 'PrizeController@store');
 // Route::get('/admin/boxes', 'AdminController@boxes');

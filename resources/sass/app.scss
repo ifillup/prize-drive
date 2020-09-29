@@ -16,6 +16,21 @@ body {
     background: url(https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/background.png)
         center top;
 }
+nav {
+    background-image: linear-gradient(to bottom right, black, darkred);
+}
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .products-list {
     margin: 2rem;
 }

@@ -37266,6 +37266,12 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+document.querySelectorAll(".box").forEach(function (box) {
+  box.addEventListener("click", function (e) {
+    console.log(e);
+  }, true);
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

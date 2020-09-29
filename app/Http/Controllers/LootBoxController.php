@@ -47,7 +47,7 @@ class LootBoxController extends Controller
         return redirect('/admin/boxes');
     }
     //returns the brought lootbox
-    public function show($id)
+    public function open($id)
     {
 
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
@@ -96,5 +96,10 @@ class LootBoxController extends Controller
         $box->delete();
 
         return redirect('/admin/boxes');
+    }
+    public function show($id)
+    {
+        $box = LootBox::find($id);
+        return view('home.box', compact('box'));
     }
 }
