@@ -4,7 +4,7 @@
 <div class="card">
     <h4 id='title'>Click to open!!!</h4>
 <img id="open-img" class='rotate' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
-<img id="knife" class='knife' src="storage/knife.png" >
+<img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
 </div>
 
 <script>
@@ -16,13 +16,13 @@
         setTimeout(()=> {
 
         @if (session('product') == 'no prize')
-          let sound = new Audio('storage/dodo.mp3');
+          let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
           sound.volume = 0.5;
           sound.play();
           document.getElementById('title').innerText = "You didn't win a prize this time"
         @else
            e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
-           let sound = new Audio('storage/tada.mp3');
+           let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
             sound.volume = 0.5;
             sound.play();
           document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
