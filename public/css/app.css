@@ -10906,8 +10906,13 @@ a.text-dark:focus {
 
 * {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  margin: 0;
+  padding: 0;
+  color: #a5a5a5;
+  background: url(/storage/background.png) center top;
 }
 
 .products-list {
@@ -10978,6 +10983,34 @@ main,
 @keyframes rotate {
   to {
     transform: rotateY(360deg);
+  }
+}
+
+.knife {
+  display: none;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.open {
+  -webkit-animation: open 5s;
+          animation: open 5s;
+  display: block;
+  top: 75px;
+  left: 40px;
+}
+
+@-webkit-keyframes open {
+  to {
+    top: -57px;
+    left: 450px;
+  }
+}
+
+@keyframes open {
+  to {
+    top: -57px;
+    left: 450px;
   }
 }
 

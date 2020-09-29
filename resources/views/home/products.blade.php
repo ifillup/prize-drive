@@ -1,8 +1,20 @@
 
-<div class="products-list d-flex mb-5">
+<div class="products-list d-flex mb-5 overflow-hidden">
 @foreach ($products as $product)
     <img src="{{env('AWS_URL').'/'. $product->image }}" alt="" class="col-2 rounded-circle">
 @endforeach
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
 </div>
     {{--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">

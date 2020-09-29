@@ -57,6 +57,11 @@
                 <h5>{{ $box->name}}</h5>
                 <h5>Price: ${{$box->price}}</h5>
                 <h5>Cost: ${{$box->cost()}}</h5>
+                <form method="POST" action="/admin/{{ $box->id }}"  >
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger">DELETE</button>
+                </form>
             </div>
             <div class="" >
             <img class="" style="max-width: 100px;"  src="{{env('AWS_URL') .'/' .$box->image}}" >

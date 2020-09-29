@@ -24,6 +24,7 @@ Route::get('/open/{id}', 'LootBoxController@show');
 Route::post('/admin/boxes', 'LootBoxController@store');
 Route::post('/admin/add', 'PrizeController@store');
 // Route::get('/admin/boxes', 'AdminController@boxes');
+Route::delete('admin/{id}', 'LootBoxController@destroy');
 
 
 

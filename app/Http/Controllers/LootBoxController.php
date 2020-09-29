@@ -52,7 +52,6 @@ class LootBoxController extends Controller
 
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
 
-        // $prizesArr = $prizes->toArray();
         $draw = array();
         foreach ($prizes as $prize) {
 
@@ -84,5 +83,18 @@ class LootBoxController extends Controller
         $boxes = LootBox::all();
         $products = Product::all();
         return view('admin.boxes', compact('boxes', 'products'));
+    }
+    // delete all prizes via lootbox relationship, lootbox, and image from s3
+    public function destroy($id)
+    {
+        $box = LootBox::find($id);
+
+        foreach ($box->prizes as $prize) {
+            $prize->delete();
+        }
+        Storage::disk('s3')->delete($box->image);
+        $box->delete();
+
+        return redirect('/admin/boxes');
     }
 }
