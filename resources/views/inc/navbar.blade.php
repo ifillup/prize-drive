@@ -77,10 +77,11 @@
                     <li class="nav-item">
 
 
-                        <div class="d-flex bg-dark rounded-pill ml-5 p-2">
+                        <div class="d-flex rounded-pill ml-5 p-2 nav-badge">
                             <img src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/user.jpg" style="height: 50px;" class="rounded-circle">
-<div class="">
+                    <div class="">
                             <p class="mb-0 ml-2">$ 300</p>
+
                         <button class="btn">DEPOSIT</button>
                     </div>
                         </div>
