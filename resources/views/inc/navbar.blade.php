@@ -74,6 +74,17 @@
                                 Admin
                         </a>
                     </li>
+                    <li class="nav-item">
+
+
+                        <div class="d-flex bg-dark rounded-pill ml-5 p-2">
+                            <img src="/storage/user.jpg" style="height: 50px;" class="rounded-circle">
+<div class="">
+                            <p class="mb-0 ml-2">$ 300</p>
+                        <button class="btn">DEPOSIT</button>
+                    </div>
+                        </div>
+                    </li>
                 @endguest
             </ul>
         </div>

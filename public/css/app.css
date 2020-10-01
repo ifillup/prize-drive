@@ -10968,12 +10968,14 @@ a:active {
   transform: translateY(-1rem);
 }
 
-#title {
-  background-color: white;
+#open-btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
 }
 
-#app {
-  min-height: 100vh;
+#title {
+  background-color: white;
 }
 
 main,
