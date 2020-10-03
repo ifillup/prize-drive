@@ -9,7 +9,7 @@
 
 <div class="card-list product-list">
 @foreach ($box->prizes as $prize)
-<div class="card">
+<div class="card" >
     <img src="{{env('AWS_URL').'/'.$prize->product->image}}" alt="" class="card-image-top">
     <div class="drop-rate">{{$prize->percentage}}%</div>
 <p class="card-text">{{$prize->product->name}}</p>
