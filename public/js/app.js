@@ -37271,6 +37271,11 @@ document.querySelectorAll(".box").forEach(function (box) {
     console.log(e);
   }, true);
 });
+document.getElementById("show-drops").addEventListener("click", function () {
+  document.querySelectorAll(".drop-rate").forEach(function (el) {
+    return el.classList.toggle("show");
+  });
+});
 
 /***/ }),
 

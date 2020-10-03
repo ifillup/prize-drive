@@ -7,7 +7,9 @@
     <button id="open-btn" class="btn btn-outline-primary" >Open for ${{$box->price}}</button>
     </div>
 
-<div class="card-list product-list">
+
+    <button id="show-drops" class="btn">show drops %</button>
+    <div class="card-list product-list">
 @foreach ($box->prizes as $prize)
 <div class="card" >
     <img src="{{env('AWS_URL').'/'.$prize->product->image}}" alt="" class="card-image-top">

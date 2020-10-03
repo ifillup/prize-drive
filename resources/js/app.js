@@ -9,3 +9,9 @@ document.querySelectorAll(".box").forEach(box => {
         true
     );
 });
+
+document.getElementById("show-drops").addEventListener("click", () => {
+    document
+        .querySelectorAll(".drop-rate")
+        .forEach(el => el.classList.toggle("show"));
+});
