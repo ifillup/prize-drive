@@ -21,4 +21,9 @@ class PrizeController extends Controller
         $prize->save();
         return redirect('/admin/boxes');
     }
+    // public function show($id)
+    // {
+
+    //     return view('/home/box', compact('box'));
+    // }
 }

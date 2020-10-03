@@ -1,4 +1,4 @@
-<div class="card-list">
+<div class="card-list rounded">
 
 
 
@@ -9,7 +9,7 @@
             <img src="{{env('AWS_URL').'/'.$box->image}}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{$box->name}}</h5>
-            <p class="card-text">{{$box->description}}</p>
+
             <a href="{{url('open/'.$box->id)}}" class="btn btn-primary">BUY ${{$box->price}}</a>
 
             </div>

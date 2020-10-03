@@ -12,24 +12,24 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/">
                         <i class="fas fa-box-open"></i>
                         Boxes
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/">
                         <i class="fas fa-question-circle"></i>
                          FAQ
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/">
                         <i class="fas fa-user-circle"></i>
                          Account
                     </a>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/">
                         <i class="fas fa-crown"></i>
                             Top
                     </a>

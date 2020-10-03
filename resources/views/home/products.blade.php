@@ -3,7 +3,7 @@
 @foreach ($products as $product)
     <img src="{{env('AWS_URL').'/'. $product->image }}" alt="" class="col-2 rounded-circle">
 @endforeach
-<img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
+<img src="storage/knife.png" alt="" class="col-2 rounded-circle">
 <img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
 <img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
 <img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">

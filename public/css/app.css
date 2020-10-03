@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
@@ -10913,6 +10913,7 @@ body {
   padding: 0;
   color: #a5a5a5;
   background: url(https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/background.png) center top;
+  font-family: "Raleway", sans-serif;
 }
 
 nav {
@@ -10938,12 +10939,14 @@ a:active {
 
 .products-list {
   margin: 2rem;
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .feature {
   margin: 2rem;
   display: flex;
   justify-content: center;
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .feature .card {
@@ -10951,10 +10954,36 @@ a:active {
   box-shadow: -1rem 0 3rem #000;
 }
 
+.product-list img {
+  width: 300px;
+  opacity: 1;
+}
+
+.product-list .card:hover {
+  opacity: 0.3;
+}
+
+.product-list .card:hover .drop-rate {
+  transition: 0.5s ease;
+  opacity: 1;
+}
+
+.drop-rate {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 2em;
+  background: rgba(0, 0, 255, 0.1);
+}
+
 .card-list {
   padding: 3rem;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .card-list .card {
@@ -10972,10 +11001,16 @@ a:active {
   transform: translateY(-1rem);
 }
 
+.boxview {
+  text-align: center;
+  position: relative;
+  background-color: rgba(41, 19, 19, 0.1);
+}
+
 #open-btn {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 80%;
+  left: 45%;
 }
 
 #title {
