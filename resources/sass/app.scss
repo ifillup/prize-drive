@@ -64,12 +64,13 @@ a:active {
     display: flex;
     flex-direction: column;
     max-width: 12em;
-    background-color: #666;
+    background-color: #6666;
     align-items: center;
     border-radius: 24px;
     overflow: hidden;
     span {
         margin-top: 0.7em;
+        color: white;
     }
     img {
         width: 100%;
