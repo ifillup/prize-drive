@@ -2,10 +2,10 @@
 
 @section('content')
 <main class="">
-<div class="container">
+
 
     @include('home.products')
-
+    <div class="container">
     <div class="feature">
         @if (session('product'))
             @include('home.open')
