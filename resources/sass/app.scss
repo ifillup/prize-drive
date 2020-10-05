@@ -122,7 +122,10 @@ a:active {
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 2em;
-    background: rgba(0, 0, 255, 0.1);
+    color: white;
+    background-color: gold;
+    border-radius: 900px;
+    padding: 0 2em;
 }
 .boxview {
     text-align: center;
