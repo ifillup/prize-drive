@@ -16,8 +16,9 @@ if (document.getElementById("show-drops")) {
             .forEach(el => el.classList.toggle("show"));
     });
 }
-
-setInterval(() => {
-    let carosel = document.querySelector(".products-thumbs");
-    carosel.appendChild(document.querySelector(".border-wrap"));
-}, 1000);
+if (document.querySelector(".products-thumbs")) {
+    setInterval(() => {
+        let carosel = document.querySelector(".products-thumbs");
+        carosel.appendChild(document.querySelector(".border-wrap"));
+    }, 1000);
+}

@@ -37280,10 +37280,12 @@ if (document.getElementById("show-drops")) {
   });
 }
 
-setInterval(function () {
-  var carosel = document.querySelector(".products-thumbs");
-  carosel.appendChild(document.querySelector(".border-wrap"));
-}, 1000);
+if (document.querySelector(".products-thumbs")) {
+  setInterval(function () {
+    var carosel = document.querySelector(".products-thumbs");
+    carosel.appendChild(document.querySelector(".border-wrap"));
+  }, 1000);
+}
 
 /***/ }),
 
