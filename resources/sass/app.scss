@@ -187,3 +187,30 @@ main,
         left: 450px;
     }
 }
+
+.product-thumb {
+    width: 100px;
+    height: 100px;
+    animation: counterRotate 1.5s linear infinite;
+}
+.border-wrap {
+    width: 106px;
+    height: 106px;
+    padding: 1rem;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+    animation: rotateThis 1.5s linear infinite;
+}
+
+@keyframes rotateThis {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes counterRotate {
+    to {
+        transform: rotate(-360deg);
+    }
+}

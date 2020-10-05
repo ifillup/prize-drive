@@ -1,8 +1,9 @@
 
-<section class="products-list d-flex mb-5 overflow-hidden">
+<section class="products-thumbs d-flex mb-5 overflow-hidden">
 @foreach ($products as $product)
-    <img src="{{env('AWS_URL').'/'. $product->image }}" alt="" class="col-2 rounded-circle">
+    <div class="border-wrap"><img src="{{env('AWS_URL').'/'. $product->image }}" alt="" class="rounded-circle product-thumb"></div>
 @endforeach
+
 <img src="storage/knife.png" alt="" class="col-2 rounded-circle">
 <img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">
 <img src="storage/knife.jpg" alt="" class="col-2 rounded-circle">

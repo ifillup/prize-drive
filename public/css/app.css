@@ -11116,3 +11116,46 @@ main,
   }
 }
 
+.product-thumb {
+  width: 100px;
+  height: 100px;
+  -webkit-animation: counterRotate 1.5s linear infinite;
+          animation: counterRotate 1.5s linear infinite;
+}
+
+.border-wrap {
+  width: 106px;
+  height: 106px;
+  padding: 1rem;
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+  -webkit-animation: rotateThis 1.5s linear infinite;
+          animation: rotateThis 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotateThis {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateThis {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes counterRotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes counterRotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
