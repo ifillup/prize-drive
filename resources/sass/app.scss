@@ -114,6 +114,10 @@ a:active {
     transition: 0.5s ease;
     opacity: 1 !important;
 }
+#show-drops {
+    background-color: #ffd70055;
+    color: white;
+}
 .drop-rate {
     opacity: 0;
     position: absolute;
