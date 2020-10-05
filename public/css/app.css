@@ -11123,7 +11123,12 @@ main,
           animation: counterRotate 1.5s linear infinite;
 }
 
+.products-thumbs {
+  overflow: hidden;
+}
+
 .border-wrap {
+  margin: 0.4em;
   width: 106px;
   height: 106px;
   padding: 1rem;

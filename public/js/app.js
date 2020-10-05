@@ -37271,11 +37271,19 @@ document.querySelectorAll(".box").forEach(function (box) {
     console.log(e);
   }, true);
 });
-document.getElementById("show-drops").addEventListener("click", function () {
-  document.querySelectorAll(".drop-rate").forEach(function (el) {
-    return el.classList.toggle("show");
+
+if (document.getElementById("show-drops")) {
+  document.getElementById("show-drops").addEventListener("click", function () {
+    document.querySelectorAll(".drop-rate").forEach(function (el) {
+      return el.classList.toggle("show");
+    });
   });
-});
+}
+
+setInterval(function () {
+  var carosel = document.querySelector(".products-thumbs");
+  carosel.appendChild(document.querySelector(".border-wrap"));
+}, 1000);
 
 /***/ }),
 
