@@ -10959,6 +10959,7 @@ a:active {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1em 1em;
+  justify-items: center;
 }
 
 .box {
@@ -11064,11 +11065,6 @@ a:active {
 main,
 .sidebar {
   min-height: 100vh;
-}
-
-#open-img {
-  width: 400px;
-  height: 400px;
 }
 
 .rotate {
