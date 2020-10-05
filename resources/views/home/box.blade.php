@@ -9,15 +9,15 @@
 
 
     <button id="show-drops" class="btn">show drops %</button>
-    <div class="card-list product-list">
-@foreach ($box->prizes as $prize)
-<div class="card" >
-    <img src="{{env('AWS_URL').'/'.$prize->product->image}}" alt="" class="card-image-top">
-    <div class="drop-rate">{{$prize->percentage}}%</div>
-<p class="card-text">{{$prize->product->name}}</p>
-</div>
-@endforeach
-</div>
+    <section class="product-list box-list">
+        @foreach ($box->prizes as $prize)
+        <article class="product" >
+            <img src="{{env('AWS_URL').'/'.$prize->product->image}}" alt="" class="">
+            <div class="drop-rate">{{$prize->percentage}}%</div>
+            <p class="card-text">{{$prize->product->name}}</p>
+        </article>
+        @endforeach
+        </section>
 
 
 @endsection

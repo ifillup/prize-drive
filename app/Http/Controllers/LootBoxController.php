@@ -24,12 +24,12 @@ class LootBoxController extends Controller
         // $imagePath = request('image')->store('/uploads', 'public');
 
         //dd(public_path("storage/{$imagePath}"));
-        $image = Image::make(request('image'))->fit(400, 400)->encode('jpg');
+        $image = Image::make(request('image'))->fit(400, 400)->encode('png');
         //$image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400)->save();
 
 
         // $image = Image::make(request('image'))->fit(400, 400)->save(env('AWS_URL') . '/uploads/');
-        $filePath = 'uploads/' . uniqid() . '.jpg';
+        $filePath = 'uploads/' . uniqid() . '.png';
         Storage::disk('s3')->put($filePath, $image);
         // Storage::delete($imagePath);
 
