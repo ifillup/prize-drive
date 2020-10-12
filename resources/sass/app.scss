@@ -18,6 +18,7 @@ body {
     background: url(https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/background.png)
         center top;
     font-family: "Raleway", sans-serif;
+    color: rgba(255, 255, 255, 0.5);
 }
 nav {
     background-image: linear-gradient(to bottom right, black, darkred);
@@ -30,7 +31,6 @@ nav {
     }
     ul {
         list-style: none;
-        color: rgba(255, 255, 255, 0.5);
         margin: 0;
         padding: 0;
     }
@@ -50,10 +50,6 @@ nav {
     position: sticky;
     width: 160px;
     overflow-x: hidden;
-}
-
-.dashboard-container {
-    display: flex;
 }
 
 .products-list {
@@ -240,6 +236,11 @@ main,
     }
 }
 
+.flip-container {
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 600px) {
     .sidenav {
         min-height: 2em;
@@ -251,6 +252,9 @@ main,
         }
     }
     .dashboard-container {
+        flex-direction: column;
+    }
+    .flip-container {
         flex-direction: column;
     }
 }

@@ -5,7 +5,7 @@
 <main class="bg-white">
 
 
-<div class="dashboard-container">
+<div class="flip-container">
         <nav class='sidenav'>
             <ul class="">
 

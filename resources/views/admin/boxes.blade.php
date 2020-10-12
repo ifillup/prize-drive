@@ -1,7 +1,7 @@
 @extends('admin.dashboard')
 
 @section('main')
-<div class="d-flex align-items-start">
+<div class="flip-container">
     <form class='bg-light p-2 rounded ml-2 mr-2' action="{{ secure_url('/admin/boxes')}}" method="POST" enctype="multipart/form-data" >
         @csrf
         <h4>Create LootBox</h4>
