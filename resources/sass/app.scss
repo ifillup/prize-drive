@@ -58,9 +58,10 @@ nav {
 }
 .feature {
     max-width: 800px;
+    background: red;
     margin: 2rem;
     display: flex;
-    justify-content: center;
+    align-self: center;
     background-color: rgba(0, 0, 255, 0.1);
     .card {
         border-radius: 16px;
@@ -241,6 +242,14 @@ main,
 .flip-container {
     display: flex;
     flex-direction: row;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    padding: 1em;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {

@@ -5,14 +5,8 @@
 
 
     @include('home.products')
-    <div class="container">
-    <div class="feature">
-        @if (session('product'))
-            @include('home.open')
-        @else
-            @include('home.feature')
-        @endif
-    </div>
+    <div class="main-container">
+    @include('home.feature')
     @include('home.boxes')
 </div>
 </main>
