@@ -15,17 +15,17 @@
         document.getElementById('knife').classList.add('open');
         setTimeout(()=> {
 
-        @if (session('product') == 'no prize')
+        @if ($product == 'no prize')
           let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
           sound.volume = 0.5;
           sound.play();
           document.getElementById('title').innerText = "You didn't win a prize this time"
         @else
-           e.target.src = "{{env('AWS_URL').'/'. session('product')->image }}"
+           e.target.src = "{{env('AWS_URL').'/'. $product->image }}"
            let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
             sound.volume = 0.5;
             sound.play();
-          document.getElementById('title').innerText = "You won a {{session('product')->name}}!!!!"
+          document.getElementById('title').innerText = "You won a {{$product->name}}!!!!"
 
         @endif
 

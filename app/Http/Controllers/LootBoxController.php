@@ -73,9 +73,10 @@ class LootBoxController extends Controller
             $product = $prize->product;
         }
 
+        $box = LootBox::find($id);
+        return view('home.box', compact('product', 'box'));
 
-
-        return redirect('/')->with(compact('product'));
+        // return redirect('/')->with(compact('product'));
     }
     public function index()
     {

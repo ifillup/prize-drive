@@ -11,13 +11,10 @@
               </a>
             <span class="">{{$box->name}}</span>
 
-            <a href="{{url('open/'.$box->id)}}" class="buy-btn">$ {{$box->price}}</a>
+            <a href="{{url('show/'.$box->id)}}" class="buy-btn">$ {{$box->price}}</a>
 
 
         </article>
-
-
-    {{--  --}}
 
     @else
 
