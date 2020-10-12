@@ -21,20 +21,39 @@ body {
 }
 nav {
     background-image: linear-gradient(to bottom right, black, darkred);
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    ul {
+        list-style: none;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0;
+        padding: 0;
+    }
 }
 .nav-badge {
     background-image: linear-gradient(to bottom right, black, darkred);
 }
-a,
-a:hover,
-a:focus,
-a:active {
-    text-decoration: none;
-    color: inherit;
-}
+
 .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.sidenav {
+    min-height: 100vh;
+    padding: 2em;
+    position: sticky;
+    width: 160px;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
 }
 
 .products-list {
@@ -218,5 +237,20 @@ main,
 @keyframes counterRotate {
     to {
         transform: rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidenav {
+        min-height: 2em;
+        width: 100%;
+        justify-items: center;
+        li {
+            display: inline;
+            padding: 1em;
+        }
+    }
+    .dashboard-container {
+        flex-direction: column;
     }
 }
