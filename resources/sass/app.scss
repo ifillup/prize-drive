@@ -57,6 +57,7 @@ nav {
     background-color: rgba(0, 0, 255, 0.1);
 }
 .feature {
+    max-width: 800px;
     margin: 2rem;
     display: flex;
     justify-content: center;
@@ -212,6 +213,7 @@ main,
 }
 .products-thumbs {
     overflow: hidden;
+    display: flex;
 }
 .border-wrap {
     margin: 0.4em;

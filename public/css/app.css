@@ -10959,6 +10959,7 @@ nav ul {
 }
 
 .feature {
+  max-width: 800px;
   margin: 2rem;
   display: flex;
   justify-content: center;
@@ -11137,6 +11138,7 @@ main,
 
 .products-thumbs {
   overflow: hidden;
+  display: flex;
 }
 
 .border-wrap {
