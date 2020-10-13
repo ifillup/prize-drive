@@ -59,7 +59,7 @@ nav {
 }
 .feature {
     max-width: 800px;
-    margin: 2rem;
+    position: relative;
     display: flex;
     align-self: center;
 
@@ -180,8 +180,8 @@ main,
 }
 
 #open-img {
-    // width: 400px;
-    // height: 400px;
+    width: 400px;
+    height: 400px;
 }
 .rotate {
     animation: rotate 1.5s linear infinite;
@@ -199,19 +199,35 @@ main,
     transform: rotate(-90deg);
 }
 .open {
-    animation: open 5s;
+    animation: open 3s;
     display: block;
     top: 75px;
     left: 40px;
 }
 @keyframes open {
+    // from {
+    //     // top: 200px;
+    //     // left: 40px;
+    // }
+    // to {
+    //     top: -57px;
+    //     left: 450px;
+    // }
     from {
-        // top: 200px;
-        // left: 40px;
+        top: 350px;
+        left: 0px;
+    }
+    50% {
+        top: 0px;
+        left: 400px;
+    }
+    51% {
+        top: 350px;
+        left: 350px;
     }
     to {
-        top: -57px;
-        left: 450px;
+        top: 0px;
+        left: 0px;
     }
 }
 

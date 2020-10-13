@@ -8,7 +8,9 @@
 </div>
 
 <script>
+
     document.getElementById('open-img').addEventListener('click', (e) => {
+
         e.target.classList.remove('rotate');
         document.getElementById('title').innerText = ""
 
@@ -28,7 +30,7 @@
           document.getElementById('title').innerText = "You won a {{$product->name}}!!!!"
 
         @endif
-
+        document.getElementById('knife').classList.remove('open');
         }, 3000)
 
 

@@ -10961,7 +10961,7 @@ nav ul {
 
 .feature {
   max-width: 800px;
-  margin: 2rem;
+  position: relative;
   display: flex;
   align-self: center;
   overflow: hidden;
@@ -11090,6 +11090,11 @@ main,
   min-height: 100vh;
 }
 
+#open-img {
+  width: 400px;
+  height: 400px;
+}
+
 .rotate {
   -webkit-animation: rotate 1.5s linear infinite;
           animation: rotate 1.5s linear infinite;
@@ -11114,24 +11119,54 @@ main,
 }
 
 .open {
-  -webkit-animation: open 5s;
-          animation: open 5s;
+  -webkit-animation: open 3s;
+          animation: open 3s;
   display: block;
   top: 75px;
   left: 40px;
 }
 
 @-webkit-keyframes open {
+  from {
+    top: 350px;
+    left: 0px;
+  }
+
+  50% {
+    top: 0px;
+    left: 400px;
+  }
+
+  51% {
+    top: 350px;
+    left: 350px;
+  }
+
   to {
-    top: -57px;
-    left: 450px;
+    top: 0px;
+    left: 0px;
   }
 }
 
 @keyframes open {
+  from {
+    top: 350px;
+    left: 0px;
+  }
+
+  50% {
+    top: 0px;
+    left: 400px;
+  }
+
+  51% {
+    top: 350px;
+    left: 350px;
+  }
+
   to {
-    top: -57px;
-    left: 450px;
+    top: 0px;
+    left: 0px;
   }
 }
 
