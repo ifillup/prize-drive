@@ -37287,6 +37287,13 @@ if (document.querySelector(".products-thumbs")) {
   }, 1000);
 }
 
+if (document.querySelector(".feature")) {
+  setInterval(function () {
+    var carosel = document.querySelector(".feature");
+    carosel.appendChild(document.querySelector(".featured"));
+  }, 3000);
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
