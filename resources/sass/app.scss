@@ -59,11 +59,10 @@ nav {
 }
 .feature {
     max-width: 800px;
-    background: red;
     margin: 2rem;
     display: flex;
     align-self: center;
-    background-color: rgba(0, 0, 255, 0.1);
+
     overflow: hidden;
     .card {
         border-radius: 16px;
@@ -165,8 +164,10 @@ nav {
 
 #open-btn {
     position: absolute;
-    top: 80%;
-    left: 45%;
+    // top: 80%;
+    // left: 45%;
+    margin-top: 80%;
+    align-self: center;
 }
 
 #title {
