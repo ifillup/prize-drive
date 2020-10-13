@@ -194,39 +194,39 @@ main,
 }
 
 .knife {
-    display: none;
+    //display: none;
     position: absolute;
     transform: rotate(-90deg);
 }
 .open {
-    animation: open 3s;
+    animation: open 1s 3;
     display: block;
     top: 75px;
     left: 40px;
 }
 @keyframes open {
     // from {
-    //     // top: 200px;
-    //     // left: 40px;
+    //     top: 0px;
+    //     left: 153px;
     // }
     // to {
-    //     top: -57px;
-    //     left: 450px;
+    //     top: 400px;
+    //     left: 400px;
     // }
     from {
-        top: 350px;
+        top: -50px;
         left: 0px;
     }
     50% {
-        top: 0px;
-        left: 400px;
+        top: 250px;
+        left: 250px;
     }
     51% {
-        top: 350px;
-        left: 350px;
+        top: -50px;
+        left: 250px;
     }
     to {
-        top: 0px;
+        top: 250px;
         left: 0px;
     }
 }

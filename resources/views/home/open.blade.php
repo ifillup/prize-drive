@@ -15,8 +15,19 @@
         document.getElementById('title').innerText = ""
 
         document.getElementById('knife').classList.add('open');
-        setTimeout(()=> {
+        const openSound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife-slash.wav');
+        const openSound2 = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife-slash2.wav');
+        openSound2.play();
+        const playingSound = setInterval(() => {
+            openSound.play();
+        }, 500);
+        const playingSound2 = setTimeout(() => {
+            openSound.play();
+        }, 1000);
 
+        setTimeout(()=> {
+            clearInterval(playingSound);
+            clearInterval(playingSound2);
         @if ($product == 'no prize')
           let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
           sound.volume = 0.5;

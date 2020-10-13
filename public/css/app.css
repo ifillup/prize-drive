@@ -11113,14 +11113,13 @@ main,
 }
 
 .knife {
-  display: none;
   position: absolute;
   transform: rotate(-90deg);
 }
 
 .open {
-  -webkit-animation: open 3s;
-          animation: open 3s;
+  -webkit-animation: open 1s 3;
+          animation: open 1s 3;
   display: block;
   top: 75px;
   left: 40px;
@@ -11128,44 +11127,44 @@ main,
 
 @-webkit-keyframes open {
   from {
-    top: 350px;
+    top: -50px;
     left: 0px;
   }
 
   50% {
-    top: 0px;
-    left: 400px;
+    top: 250px;
+    left: 250px;
   }
 
   51% {
-    top: 350px;
-    left: 350px;
+    top: -50px;
+    left: 250px;
   }
 
   to {
-    top: 0px;
+    top: 250px;
     left: 0px;
   }
 }
 
 @keyframes open {
   from {
-    top: 350px;
+    top: -50px;
     left: 0px;
   }
 
   50% {
-    top: 0px;
-    left: 400px;
+    top: 250px;
+    left: 250px;
   }
 
   51% {
-    top: 350px;
-    left: 350px;
+    top: -50px;
+    left: 250px;
   }
 
   to {
-    top: 0px;
+    top: 250px;
     left: 0px;
   }
 }
