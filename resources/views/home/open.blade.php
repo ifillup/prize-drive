@@ -1,8 +1,8 @@
 
 
+<h4 id='title'>Click to open!!!</h4>
+<div class="feature">
 
-<div class="boxview">
-    <h4 id='title'>Click to open!!!</h4>
 <img id="open-img" class='rotate' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 <img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
 </div>

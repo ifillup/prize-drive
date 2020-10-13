@@ -10956,6 +10956,7 @@ nav ul {
 .products-list {
   margin: 2rem;
   background-color: rgba(0, 0, 255, 0.1);
+  width: 100%;
 }
 
 .feature {
@@ -10978,6 +10979,7 @@ nav ul {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1em 1em;
   justify-items: center;
+  width: 100%;
 }
 
 .box {
@@ -11048,6 +11050,7 @@ nav ul {
 #show-drops {
   background-color: #ffd70055;
   color: white;
+  align-self: flex-end;
 }
 
 .drop-rate {
@@ -11065,6 +11068,9 @@ nav ul {
 }
 
 .boxview {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   position: relative;
   background-color: rgba(41, 19, 19, 0.1);
@@ -11183,6 +11189,7 @@ main,
   max-width: 90%;
   padding: 1em;
   margin: 0 auto;
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {

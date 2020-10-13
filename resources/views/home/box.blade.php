@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="main-container">
+    <div class="boxview">
     @if (isset($product))
      @include('home.open')
     @else
-        <div class="container-fluid boxview m-2">
+
             <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
         <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary"  >Open for ${{$box->price}}</a>
-        </div>
-    @endif
 
+    @endif
+</div>
 
 
 
@@ -25,5 +26,5 @@
         @endforeach
         </section>
 
-
+    </div>
 @endsection
