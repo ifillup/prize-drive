@@ -11113,6 +11113,7 @@ main,
 }
 
 .knife {
+  display: none;
   position: absolute;
   transform: rotate(-90deg);
 }
