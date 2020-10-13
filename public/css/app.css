@@ -10966,6 +10966,7 @@ nav ul {
   display: flex;
   align-self: center;
   background-color: rgba(0, 0, 255, 0.1);
+  overflow: hidden;
 }
 
 .feature .card {
