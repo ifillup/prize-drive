@@ -31,7 +31,7 @@
               </ul>
         </nav>
 
-        <div class="pt-1 bg-white">
+        <div class="dashboard-container bg-white">
             @yield('main')
 
         </div>

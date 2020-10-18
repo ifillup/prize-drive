@@ -11226,6 +11226,10 @@ main,
   align-items: center;
 }
 
+.dashboard-container {
+  overflow-x: scroll;
+}
+
 @media screen and (max-width: 600px) {
   .sidenav {
     min-height: 2em;

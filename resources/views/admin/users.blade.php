@@ -2,7 +2,7 @@
 
 @section('main')
 <h4 class='bg-light rounded m-2'>Users</h4>
-<table class="table table-striped bg-light rounded m-2 shadow ">
+<table class="table table-striped bg-light rounded m-2 shadow">
 
     <thead>
       <tr>

@@ -277,6 +277,11 @@ main,
     align-items: center;
 }
 
+//Admin dashboard
+.dashboard-container {
+    overflow-x: scroll;
+}
+
 @media screen and (max-width: 600px) {
     .sidenav {
         min-height: 2em;
