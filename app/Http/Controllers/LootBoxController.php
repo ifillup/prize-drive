@@ -42,7 +42,8 @@ class LootBoxController extends Controller
             'name' => $data['name'],
             'price' => $data['price'],
             'description' => $data['description'],
-            'image' => $filePath
+            'image' => $filePath,
+            'published' => false
 
         ]);
 

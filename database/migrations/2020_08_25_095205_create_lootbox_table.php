@@ -20,6 +20,7 @@ class CreateLootboxTable extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->decimal('price', 6, 2);
+            $table->boolean('published')->default(false);
         });
     }
 

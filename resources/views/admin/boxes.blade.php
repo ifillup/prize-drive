@@ -54,14 +54,31 @@
         <div class="bg-light m-2 p-2 rounded border">
             <div class="d-flex justify-content-between" >
             <div class="">
-                <h5>{{ $box->name}}</h5>
-                <h5>Price: ${{$box->price}}</h5>
-                <h5>Cost: ${{$box->cost()}}</h5>
-                <form method="POST" action="/admin/{{ $box->id }}"  >
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger">DELETE</button>
-                </form>
+                <div class="d-flex">
+                    <div class="">
+                        <h5>{{ $box->name}}</h5>
+                        <h5>Price: ${{$box->price}}</h5>
+                        <h5>Cost: ${{$box->cost()}}</h5>
+                    </div>
+                @if ($box->price < $box->cost() )
+                    <div class="alert alert-danger ml-5">
+                    Sale price exceeds items cost, loss of ${{$box->cost() - $box->price}} per box.
+                    </div>
+
+                @endif
+                </div>
+                <div class="d-flex">
+
+                    <form method="GET" action="/admin/publish{{ $box->id }}"  >
+                        @csrf
+                        <button class="btn btn-success mr-2" disabled>Publish</button>
+                    </form>
+                    <form method="POST" action="/admin/{{ $box->id }}"  >
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">DELETE</button>
+                    </form>
+            </div>
             </div>
             <div class="" >
             <img class="" style="max-width: 100px;"  src="{{env('AWS_URL') .'/' .$box->image}}" >

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LootBox;
 use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
@@ -45,5 +46,10 @@ class AdminController extends Controller
 
         $user->update(['admin' => !$user->admin]);
         return redirect('admin');
+    }
+    public function publish($id)
+    {
+        LootBox::find($id)->update(['published' => true]);
+        return redirect('/admin/boxes');
     }
 }
