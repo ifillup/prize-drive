@@ -10,7 +10,9 @@
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Admin</th>
+        <th scope="col">Grant Admin</th>
         <th scope="col">Balance</th>
+        <th scope="col">Credit Account</th>
 
       </tr>
     </thead>
@@ -20,14 +22,22 @@
 
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
-        <td>false</td>
+        <td>{{$user->admin ? 'Admin' : 'User'}}</td>
+        <td>
+            <form action="{{ secure_url('/admin/toggle') }}" method="POST">
+                @csrf
+                @method('PATCH');
+                    <input type="hidden" name="user_id" value="{{$user->id}}" >
+                    <button class="btn btn-primary btn-sm" type="submit" >{{$user->admin ? 'Demote' : 'Admin'}}</button>
+                </form>
+        </td>
         <td>{{$user->transactions->sum('value')}}</td>
         <td>
             <form action="{{ secure_url('/admin/account') }}" method="POST">
             @csrf
                 <input type="hidden" name="user_id" value="{{$user->id}}" >
-                <input type="number" name="value" id="">
-                <button type="submit" >Credit/Debit</button>
+                <input type="number" min="-9999" max="9999" name="value" id="">
+                <button class="btn btn-primary btn-sm" type="submit" >Credit/Debit</button>
             </form>
 
         </td>

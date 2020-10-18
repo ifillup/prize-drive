@@ -38,4 +38,12 @@ class AdminController extends Controller
 
         return redirect('admin');
     }
+
+    public function toggleAdmin()
+    {
+        $user = User::find(request('user_id'));
+
+        $user->update(['admin' => !$user->admin]);
+        return redirect('admin');
+    }
 }

@@ -11,6 +11,9 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --primary-color: rgba(255, 255, 255, 0.5);
+}
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +35,7 @@ nav {
         list-style: none;
         margin: 0;
         padding: 0;
-        color: rgba(255, 255, 255, 0.5);
+        color: var(--primary-color);
     }
 }
 .nav-badge {
@@ -177,6 +180,10 @@ nav {
 main,
 .sidebar {
     min-height: 100vh;
+}
+.sidenav {
+    font-weight: bolder;
+    font-size: larger;
 }
 
 #open-img {

@@ -28,6 +28,7 @@ Route::post('/admin/add', 'PrizeController@store');
 // Route::get('/admin/boxes', 'AdminController@boxes');
 Route::delete('admin/{id}', 'LootBoxController@destroy');
 Route::post('admin/account/', 'AdminController@creditDebitUser');
+Route::patch('admin/toggle/', 'AdminController@toggleAdmin');
 
 
 
