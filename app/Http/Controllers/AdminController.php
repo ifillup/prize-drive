@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,17 @@ class AdminController extends Controller
         $users = User::all();
 
         return view('admin.users', compact('users'));
+    }
+    public function creditDebitUser()
+    {
+        $user_id = request('user_id');
+        $value = request('value');
+        $transaction = new Transaction([
+            "user_id" => $user_id,
+            "value" => $value
+        ]);
+        $transaction->save();
+
+        return redirect('admin');
     }
 }

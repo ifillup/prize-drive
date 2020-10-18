@@ -10,6 +10,7 @@
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Admin</th>
+        <th scope="col">Balance</th>
 
       </tr>
     </thead>
@@ -20,6 +21,16 @@
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
         <td>false</td>
+        <td>{{$user->transactions->sum('value')}}</td>
+        <td>
+            <form action="{{ secure_url('/admin/account') }}" method="POST">
+            @csrf
+                <input type="hidden" name="user_id" value="{{$user->id}}" >
+                <input type="number" name="value" id="">
+                <button type="submit" >Credit/Debit</button>
+            </form>
+
+        </td>
       </tr>
       @endforeach
 

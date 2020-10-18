@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\LootBox;
 use App\Product;
 use App\Prize;
+use App\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+
 
 class LootBoxController extends Controller
 {
@@ -49,7 +52,11 @@ class LootBoxController extends Controller
     //returns the brought lootbox
     public function open($id)
     {
-
+        $transaction = new Transaction([
+            "user_id" => Auth::user()->id,
+            "value" => LootBox::find($id)->price * -1
+        ]);
+        $transaction->save();
         $prizes = Prize::where('loot_box_id', '=', $id)->get();
 
         $draw = array();
@@ -75,8 +82,6 @@ class LootBoxController extends Controller
 
         $box = LootBox::find($id);
         return view('home.box', compact('product', 'box'));
-
-        // return redirect('/')->with(compact('product'));
     }
     public function index()
     {
