@@ -9,7 +9,7 @@
 
 <script>
 
-    document.getElementById('open-img').addEventListener('click', (e) => {
+    function openBox(e) {
 
         e.target.classList.remove('rotate');
         document.getElementById('title').innerText = ""
@@ -28,23 +28,31 @@
         setTimeout(()=> {
             clearInterval(playingSound);
             clearInterval(playingSound2);
-        @if ($product == 'no prize')
-          let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
-          sound.volume = 0.5;
-          sound.play();
-          document.getElementById('title').innerText = "You didn't win a prize this time"
-        @else
-           e.target.src = "{{env('AWS_URL').'/'. $product->image }}"
-           let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
-            sound.volume = 0.5;
-            sound.play();
-          document.getElementById('title').innerText = "You won a {{$product->name}}!!!!"
+                @if ($product == 'no prize')
 
-        @endif
-        document.getElementById('knife').classList.remove('open');
+                let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
+                sound.volume = 0.5;
+                sound.play();
+                document.getElementById('title').innerText = "You didn't win a prize this time"
+
+                @else
+                const sellBtn = document.createElement('BUTTON');
+                sellBtn.innerText = 'Sell for {{$product->cost}}'
+                sellBtn.id = 'open-btn'
+                sellBtn.classList.add('btn')
+                sellBtn.classList.add('btn-outline-primary')
+                e.target.src = "{{env('AWS_URL').'/'. $product->image }}"
+                let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
+                    sound.volume = 0.5;
+                    sound.play();
+                document.getElementById('title').innerText = "You won a {{$product->name}}!!!!"
+                document.querySelector('.feature').appendChild(sellBtn)
+                @endif
+            document.getElementById('knife').classList.remove('open');
         }, 3000)
+        document.getElementById('open-img').removeEventListener('click', openBox)
+        }
+    document.getElementById('open-img').addEventListener('click', openBox)
 
 
-
-    })
 </script>
