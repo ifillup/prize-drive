@@ -8,7 +8,7 @@
     @else
 
             <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
-        <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary"  >Open for ${{$box->price}}</a>
+        <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary"  >Buy for ${{$box->price}}</a>
 
     @endif
 </div>

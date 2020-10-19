@@ -68,12 +68,14 @@
                         </div>
 
                     </li>
+                    @if (Auth::user()->admin)
                     <li class="nav-item">
                         <a class="nav-link" href="{{secure_url('/admin')}}">
-
                                 Admin
                         </a>
                     </li>
+
+                    @endif
                     <li class="nav-item">
 
 
@@ -82,7 +84,7 @@
                     <div class="">
                             <p class="mb-0 ml-2">{{ Auth::user()->transactions->sum('value')}}</p>
 
-                        <button class="btn">DEPOSIT</button>
+                        <a class="btn">DEPOSIT</a>
                     </div>
                         </div>
                     </li>

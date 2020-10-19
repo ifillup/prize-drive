@@ -10965,6 +10965,7 @@ nav ul {
 
 .feature {
   max-width: 800px;
+  min-height: 440px;
   position: relative;
   display: flex;
   align-self: center;
@@ -10977,7 +10978,7 @@ nav ul {
 }
 
 .box-list {
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 155, 0.1);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1em 1em;
@@ -10990,10 +10991,10 @@ nav ul {
   display: flex;
   flex-direction: column;
   max-width: 90%;
-  background-color: #6666;
   align-items: center;
   border-radius: 24px;
   overflow: hidden;
+  border: hotpink 1px dashed;
 }
 
 .box span {
@@ -11015,10 +11016,20 @@ nav ul {
 
 .box .buy-btn:hover {
   background-color: #333;
+  text-decoration: none;
+}
+
+.box .buy-btn.btn-disabled:hover {
+  background-color: #555;
 }
 
 .box:hover {
   transform: scale(1.1);
+  border: none;
+}
+
+.box.box-disabled {
+  transform: none;
 }
 
 .product {
@@ -11107,6 +11118,32 @@ main,
 .rotate {
   -webkit-animation: rotate 1.5s linear infinite;
           animation: rotate 1.5s linear infinite;
+}
+
+.deliver {
+  position: relative;
+  -webkit-animation: deliver 1.5s ease-in;
+          animation: deliver 1.5s ease-in;
+}
+
+@-webkit-keyframes deliver {
+  from {
+    top: -500px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes deliver {
+  from {
+    top: -500px;
+  }
+
+  to {
+    top: 0px;
+  }
 }
 
 @-webkit-keyframes rotate {
@@ -11233,6 +11270,10 @@ main,
   padding: 1em;
   margin: 0 auto;
   align-items: center;
+}
+
+.btn {
+  color: var(--primary-color);
 }
 
 .dashboard-container {

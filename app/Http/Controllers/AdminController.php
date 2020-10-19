@@ -13,14 +13,7 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
-    // public function boxes()
-    // {
-    //     return view('admin.boxes');
-    // }
-    // public function products()
-    // {
-    //     return view('admin.products');
-    // }
+
     public function index()
     {
         $users = User::all();

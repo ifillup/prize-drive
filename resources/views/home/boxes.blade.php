@@ -18,10 +18,11 @@
 
     @else
 
-    <article class="box"   >
+    <article class="box box-disabled"   >
         <img src="{{env('AWS_URL').'/'.$box->image}}" class="card-img-top"  alt="...">
 
         <span class="">{{$box->name}}</span>
+        <a href="" class="buy-btn btn-disabled">Coming Soon</a>
 
 
 
