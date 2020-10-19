@@ -153,6 +153,21 @@ nav {
     color: white;
     align-self: flex-end;
 }
+#display-open {
+    background-color: #ffd70055;
+    color: white;
+    font-size: 2em;
+    animation: fadein 2.5s ease-in;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .drop-rate {
     opacity: 0;
     position: absolute;
@@ -175,10 +190,8 @@ nav {
     background-color: rgba(41, 19, 19, 0.1);
 }
 
-#open-btn {
+.open-btn {
     position: absolute;
-    // top: 80%;
-    // left: 45%;
     margin-top: 80%;
     align-self: center;
 }
@@ -205,14 +218,16 @@ main,
 }
 .deliver {
     position: relative;
-    animation: deliver 1.5s ease-in;
+    animation: deliver 1s ease-in;
 }
 
 @keyframes deliver {
     from {
+        opacity: 0;
         top: -500px;
     }
     to {
+        opacity: 1;
         top: 0px;
     }
 }

@@ -1,10 +1,11 @@
 
 
-<h4 id='title'>Click to open!!!</h4>
-<div class="feature">
+
+<div class="boxview">
 
 <img id="open-img" class='deliver' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 <img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
+<div id='display-open' class="open-btn">Click to open</div>
 </div>
 
 <script>
@@ -12,7 +13,7 @@
     function openBox(e) {
 
         e.target.classList.remove('rotate');
-        document.getElementById('title').innerText = ""
+        document.getElementById('display-open').innerText = ""
 
         document.getElementById('knife').classList.add('open');
         const openSound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife-slash.wav');
@@ -33,7 +34,7 @@
                 let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/dodo.mp3');
                 sound.volume = 0.5;
                 sound.play();
-                document.getElementById('title').innerText = "You didn't win a prize this time"
+                document.getElementById('display-open').innerText = "You didn't win a prize this time"
 
                 @else
                 const sellBtn = document.createElement('BUTTON');
@@ -45,8 +46,8 @@
                 let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
                     sound.volume = 0.5;
                     sound.play();
-                document.getElementById('title').innerText = "You won a {{$product->name}}!!!!"
-                document.querySelector('.feature').appendChild(sellBtn)
+                document.getElementById('display-open').innerText = "You won a {{$product->name}}!!!!"
+                document.querySelector('.boxview').appendChild(sellBtn)
                 @endif
             document.getElementById('knife').classList.remove('open');
         }, 3000)

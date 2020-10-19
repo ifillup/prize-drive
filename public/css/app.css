@@ -11067,6 +11067,34 @@ nav ul {
   align-self: flex-end;
 }
 
+#display-open {
+  background-color: #ffd70055;
+  color: white;
+  font-size: 2em;
+  -webkit-animation: fadein 2.5s ease-in;
+          animation: fadein 2.5s ease-in;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .drop-rate {
   opacity: 0;
   position: absolute;
@@ -11090,7 +11118,7 @@ nav ul {
   background-color: rgba(41, 19, 19, 0.1);
 }
 
-#open-btn {
+.open-btn {
   position: absolute;
   margin-top: 80%;
   align-self: center;
@@ -11122,26 +11150,30 @@ main,
 
 .deliver {
   position: relative;
-  -webkit-animation: deliver 1.5s ease-in;
-          animation: deliver 1.5s ease-in;
+  -webkit-animation: deliver 1s ease-in;
+          animation: deliver 1s ease-in;
 }
 
 @-webkit-keyframes deliver {
   from {
+    opacity: 0;
     top: -500px;
   }
 
   to {
+    opacity: 1;
     top: 0px;
   }
 }
 
 @keyframes deliver {
   from {
+    opacity: 0;
     top: -500px;
   }
 
   to {
+    opacity: 1;
     top: 0px;
   }
 }
