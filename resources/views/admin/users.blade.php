@@ -28,8 +28,8 @@
                 @csrf
                 @method('PATCH')
                     <input type="hidden" name="user_id" value="{{$user->id}}" >
-                    <button class="btn btn-primary btn-sm " {{$user->admin ? 'disabled' : ''}} type="submit" >{{$user->admin ? 'Demote' : 'Admin'}}</button>
-                </form>
+                    <button class="btn {{$user->admin ? 'btn-secondary' : 'btn-primary'}} btn-sm " {{$user->admin ? 'disabled' : ''}} type="submit" >{{$user->admin ? 'Demote' : 'Admin'}}</button>
+            </form>
         </td>
         <td>{{$user->transactions->sum('value')}}</td>
         <td>

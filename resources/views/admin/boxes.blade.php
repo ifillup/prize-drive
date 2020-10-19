@@ -71,7 +71,7 @@
 
                     <form method="GET" action="/admin/publish{{ $box->id }}"  >
                         @csrf
-                        <button class="btn btn-success mr-2" disabled>Publish</button>
+                        <button class="btn btn-outline-primary mr-2" disabled>Publish</button>
                     </form>
                     <form method="POST" action="/admin/{{ $box->id }}"  >
                         @csrf
@@ -95,6 +95,8 @@
                     <th scope="col">Drop %</th>
                     <th scope="col">Cost</th>
                     <th scope="col">Cost per box</th>
+                    <th scope="col">Edit Drop %</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -105,6 +107,16 @@
                         <td>{{ $prize->percentage}}</td>
                         <td>{{ $prize->product->cost}}</td>
                         <td>{{ $prize->product->cost * ($prize->percentage /100)}}</td>
+                        <td>
+                            <form action="{{ secure_url("/admin/edit/" .$prize->id)}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+
+                                <input type="number" min="0" max="100" name="percentage" id="">
+                                <button class="btn btn-primary btn-sm" type="submit" >Edit</button>
+                            </form>
+
+                        </td>
 
                     </tr>
                 @endforeach
