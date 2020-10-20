@@ -5,21 +5,14 @@
     <div class="boxview">
     @if (isset($product))
      @include('home.open')
+    @elseif (Auth::check())
+
+        <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
+        <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
     @else
-
-            <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
-        <a href="
-        @auth
-           {{url('open/'.$box->id)}}
-        @endauth
-
-        @guest
-           {{ route('login') }}
-        @endguest
-
-          " id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
-
-
+    <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
+    <div href="{{ route('login') }}" id="open-btn" class="btn btn-outline-primary open-btn"  >Login to buy ${{$box->price}}</div>
+    @endif
 </div>
 
 
