@@ -8,9 +8,15 @@
     @else
 
             <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
-        <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
+        <a href="
+        @if (Auth::user())
+        {{url('open/'.$box->id)}}
+        @else
+        {{ route('login') }}
+        @endif
+        " id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
 
-    @endif
+
 </div>
 
 
