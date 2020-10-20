@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+@isset(auth()->user()->inventory)
+
 
 @foreach (auth()->user()->inventory as $item)
 
@@ -12,4 +14,5 @@
         <button id='sell-btn' class="btn btn-primary btn-sm" type="submit" >Sell for ${{$item->product->cost}}</button>
 </form>
 @endforeach
+@endisset
 @endsection
