@@ -16,13 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/account', 'InventoryController@show');
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/products', 'ProductController@store');
 Route::get('/admin/products', 'ProductController@index');
 Route::get('/admin/boxes', 'LootBoxController@index');
 Route::get('/show/{id}', 'LootBoxController@show');
 
-Route::get('/open/{id}', 'LootBoxController@open');
+Route::get('/open/{id}', 'LootBoxController@open')->middleware('auth');
 Route::post('/admin/boxes', 'LootBoxController@store');
 Route::post('/admin/add', 'PrizeController@store');
 // Route::get('/admin/boxes', 'AdminController@boxes');

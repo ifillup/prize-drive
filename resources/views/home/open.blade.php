@@ -7,12 +7,13 @@
 <img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
 <div id='display-open' class="open-btn">Click to open</div>
 @if (!($product == 'no prize'))
-<form  action="{{ secure_url('/sell') }}" method="POST">
-    @csrf
-        <input type="hidden" name="value" value="{{$product->cost}}" >
-        <button id='sell-btn' class="btn btn-primary btn-sm" style="display: none;" type="submit" >Sell for ${{$product->cost}}</button>
+    <form  action="{{ secure_url('/sell') }}" method="POST">
+        @csrf
+            <input type="hidden" name="value" value="{{$product->cost}}" >
+            <input type="hidden" name="item" value="{{$item->id}}" >
+            <button id='sell-btn' class="btn btn-primary btn-sm" style="display: none;" type="submit" >Sell for ${{$product->cost}}</button>
     </form>
-    @endif
+@endif
 </div>
 
 <script>

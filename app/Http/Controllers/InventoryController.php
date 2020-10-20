@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Inventory;
 use App\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class InventoryController extends Controller
 {
@@ -17,6 +19,13 @@ class InventoryController extends Controller
         ]);
         $transaction->save();
 
-        return redirect('home');
+        Inventory::destroy(request('item'));
+        return view('account.home');
+    }
+
+    public function show()
+    {
+
+        return view('account.home');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Inventory;
 use App\LootBox;
 use App\Product;
 use App\Prize;
@@ -23,20 +24,10 @@ class LootBoxController extends Controller
             'image' => ['required', 'image']
 
         ]);
-
-        // $imagePath = request('image')->store('/uploads', 'public');
-
-        //dd(public_path("storage/{$imagePath}"));
         $image = Image::make(request('image'))->fit(400, 400)->encode('png');
-        //$image = Image::make(public_path("storage/{$imagePath}"))->fit(400, 400)->save();
 
-
-        // $image = Image::make(request('image'))->fit(400, 400)->save(env('AWS_URL') . '/uploads/');
         $filePath = 'uploads/' . uniqid() . '.png';
         Storage::disk('s3')->put($filePath, $image);
-        // Storage::delete($imagePath);
-
-
 
         $lootBox = new LootBox([
             'name' => $data['name'],
@@ -74,15 +65,21 @@ class LootBoxController extends Controller
         }
 
         $prize = $draw[array_rand($draw)];
-
+        $item = null;
         if ($prize == 'no prize') {
             $product = $prize;
         } else {
             $product = $prize->product;
+            $item = new Inventory([
+                'user_id' => auth()->user()->id,
+                'product_id' => $product->id
+            ]);
+
+            $item->save();
         }
 
         $box = LootBox::find($id);
-        return view('home.box', compact('product', 'box'));
+        return view('home.box', compact('product', 'box', 'item'));
     }
     public function index()
     {

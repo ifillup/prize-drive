@@ -27,7 +27,6 @@ class HomeController extends Controller
     {
         $products = Product::all();
         $boxes = LootBox::all();
-
         return view('home', compact('products', 'boxes'));
     }
 }
