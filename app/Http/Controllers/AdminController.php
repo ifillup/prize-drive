@@ -6,6 +6,7 @@ use App\LootBox;
 use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {

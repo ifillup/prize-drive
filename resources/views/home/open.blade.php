@@ -6,6 +6,13 @@
 <img id="open-img" class='deliver' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 <img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
 <div id='display-open' class="open-btn">Click to open</div>
+@if (!($product == 'no prize'))
+<form  action="{{ secure_url('/sell') }}" method="POST">
+    @csrf
+        <input type="hidden" name="value" value="{{$product->cost}}" >
+        <button id='sell-btn' class="btn btn-primary btn-sm" style="display: none;" type="submit" >Sell for ${{$product->cost}}</button>
+    </form>
+    @endif
 </div>
 
 <script>
@@ -37,17 +44,18 @@
                 document.getElementById('display-open').innerText = "You didn't win a prize this time"
 
                 @else
-                const sellBtn = document.createElement('BUTTON');
-                sellBtn.innerText = 'Sell for {{$product->cost}}'
-                sellBtn.id = 'open-btn'
-                sellBtn.classList.add('btn')
-                sellBtn.classList.add('btn-outline-primary')
+                // const sellBtn = document.createElement('BUTTON');
+                // sellBtn.innerText = 'Sell for {{$product->cost}}'
+                // sellBtn.id = 'open-btn'
+
+                // sellBtn.classList.add('btn')
+                // sellBtn.classList.add('btn-outline-primary')
                 e.target.src = "{{env('AWS_URL').'/'. $product->image }}"
                 let sound = new Audio('https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/tada.mp3');
                     sound.volume = 0.5;
                     sound.play();
                 document.getElementById('display-open').innerText = "You won a {{$product->name}}!!!!"
-                document.querySelector('.boxview').appendChild(sellBtn)
+                document.querySelector('#sell-btn').style.display = 'block'
                 @endif
             document.getElementById('knife').classList.remove('open');
         }, 3000)

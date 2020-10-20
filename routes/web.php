@@ -31,6 +31,7 @@ Route::post('admin/account/', 'AdminController@creditDebitUser');
 Route::patch('admin/toggle/', 'AdminController@toggleAdmin');
 Route::get('admin/publish/{id}', 'AdminController@publish');
 Route::patch('admin/edit/{id}', 'PrizeController@update');
+Route::post('sell', 'InventoryController@create');
 
 
 
