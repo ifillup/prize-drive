@@ -6,14 +6,20 @@
 <img id="open-img" class='deliver' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/uploads/box.jpg" >
 <img id="knife" class='knife' src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/knife.png" >
 <div id='display-open' class="open-btn">Click to open</div>
+<div class="" id="reveal-btns" style="display: none;">
 @if (!($product == 'no prize'))
     <form  action="{{ secure_url('/sell') }}" method="POST">
         @csrf
             <input type="hidden" name="value" value="{{$product->cost}}" >
             <input type="hidden" name="item" value="{{$item->id}}" >
-            <button id='sell-btn' class="btn btn-primary btn-sm" style="display: none;" type="submit" >Sell for ${{$product->cost}}</button>
+            <button id='sell-btn' class="btn btn-primary btn-sm"  type="submit" >Sell for ${{$product->cost}}</button>
     </form>
 @endif
+
+<a href="{{ secure_url('/account') }}" class="btn btn-primary btn-sm">Inventory</a>
+
+<a href="{{url('show/'.$box->id)}}" id="open-btn" class="btn btn-primary btn-sm"  >Another</a>
+</div>
 </div>
 
 <script>
@@ -56,7 +62,7 @@
                     sound.volume = 0.5;
                     sound.play();
                 document.getElementById('display-open').innerText = "You won a {{$product->name}}!!!!"
-                document.querySelector('#sell-btn').style.display = 'block'
+                document.querySelector('#reveal-btns').style.display = 'flex'
                 @endif
             document.getElementById('knife').classList.remove('open');
         }, 3000)
