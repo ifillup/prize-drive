@@ -16,7 +16,7 @@
         @guest
            {{ route('login') }}
         @endguest
-        @guest
+
           " id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
 
 
