@@ -9,12 +9,15 @@
 
             <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
         <a href="
-        @if (Auth::user())
-        {{url('open/'.$box->id)}}
-        @else
-        {{ route('login') }}
-        @endif
-        " id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
+        @auth
+           {{url('open/'.$box->id)}}
+        @endauth
+
+        @guest
+           {{ route('login') }}
+        @endguest
+        @guest
+          " id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
 
 
 </div>
