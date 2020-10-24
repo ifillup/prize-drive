@@ -11,7 +11,7 @@
     @csrf
         <input type="hidden" name="value" value="{{$item->product->cost}}" >
         <input type="hidden" name="item" value="{{$item->id}}" >
-        <button id='sell-btn' class="action-btn" type="submit" >Sell for ${{$item->product->cost}}</button>
+        <button id='sell-btn' class="action-btn" type="submit" >Sell ${{$item->product->cost}}</button>
 </form>
 @endforeach
 @endisset

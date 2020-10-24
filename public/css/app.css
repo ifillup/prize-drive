@@ -11037,6 +11037,9 @@ nav ul {
   background-color: #555;
   border-radius: 900px;
   color: white;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: bolder;
 }
 
 .action-btn:hover {
