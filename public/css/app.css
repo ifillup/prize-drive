@@ -10965,15 +10965,19 @@ nav ul {
 
 .feature {
   max-width: 800px;
-  position: relative;
   display: flex;
   align-self: center;
   overflow: hidden;
 }
 
-.feature .card {
-  border-radius: 16px;
-  box-shadow: -1rem 0 3rem #000;
+.feature article {
+  min-width: 240px;
+  padding: 0 1em;
+}
+
+.feature article img {
+  max-width: 100%;
+  border-radius: 50%;
 }
 
 .box-list {
