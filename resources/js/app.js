@@ -28,3 +28,5 @@ if (document.querySelector(".feature")) {
         carosel.appendChild(document.querySelector(".featured"));
     }, 3000);
 }
+
+//box opening

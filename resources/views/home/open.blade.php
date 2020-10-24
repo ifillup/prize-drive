@@ -12,13 +12,13 @@
         @csrf
             <input type="hidden" name="value" value="{{$product->cost}}" >
             <input type="hidden" name="item" value="{{$item->id}}" >
-            <button id='sell-btn' class="btn btn-primary btn-sm"  type="submit" >Sell for ${{$product->cost}}</button>
+            <button id='sell-btn' class="action-btn"  type="submit" >Sell for ${{$product->cost}}</button>
     </form>
 @endif
 
-<a href="{{ secure_url('/account') }}" class="btn btn-primary btn-sm">Inventory</a>
+<a href="{{ secure_url('/account') }}" class="action-btn">Inventory</a>
 
-<a href="{{url('show/'.$box->id)}}" id="open-btn" class="btn btn-primary btn-sm"  >Another</a>
+<a href="{{url('show/'.$box->id)}}" id="open-btn" class="action-btn"  >Another</a>
 </div>
 </div>
 

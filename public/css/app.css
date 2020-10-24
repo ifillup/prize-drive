@@ -11031,6 +11031,19 @@ nav ul {
   transform: none;
 }
 
+.action-btn {
+  margin: 0.5em;
+  padding: 0.4em 2em;
+  background-color: #555;
+  border-radius: 900px;
+  color: white;
+}
+
+.action-btn:hover {
+  background-color: #333;
+  text-decoration: none;
+}
+
 .product {
   min-width: 250px;
   display: flex;
