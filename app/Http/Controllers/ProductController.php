@@ -21,9 +21,9 @@ class ProductController extends Controller
             'image' => ['required', 'image']
         ]);
 
-        $image = Image::make(request('image'))->fit(400, 400)->encode('jpg');
+        $image = Image::make(request('image'))->fit(400, 400)->encode('png');
 
-        $filePath = 'uploads/' . uniqid('prod') . '.jpg';
+        $filePath = 'uploads/' . uniqid('prod') . '.png';
         Storage::disk('s3')->put($filePath, $image);
 
 
