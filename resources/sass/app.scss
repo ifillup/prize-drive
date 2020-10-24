@@ -105,7 +105,7 @@ nav {
         padding: 0.4em 2em;
         background-color: #555;
         border-radius: 900px;
-        color: white;
+        color: var(--primary-color);
         &:hover {
             background-color: #333;
             text-decoration: none;
@@ -127,13 +127,15 @@ nav {
     padding: 0.4em 2em;
     background-color: #555;
     border-radius: 900px;
-    color: white;
+
+    color: var(--primary-color);
     white-space: nowrap;
     text-align: center;
     font-weight: bolder;
     &:hover {
         background-color: #333;
         text-decoration: none;
+        color: white;
     }
 }
 .product {
