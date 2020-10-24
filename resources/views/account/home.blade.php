@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>Inventory</h1>
 <section class="box-list rounded">
 
 @isset(auth()->user()->inventory)
