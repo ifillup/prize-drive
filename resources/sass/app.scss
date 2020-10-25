@@ -22,6 +22,13 @@ body {
         center top;
     font-family: "Raleway", sans-serif;
 }
+h1,
+h2,
+h3,
+h4 {
+    color: var(--primary-color);
+    margin-left: 2em;
+}
 nav {
     background-image: linear-gradient(to bottom right, black, darkred);
     a,
@@ -185,6 +192,11 @@ nav {
     to {
         opacity: 1;
     }
+}
+
+.inventory-list {
+    max-width: 800px;
+    margin: 2em;
 }
 
 .drop-rate {

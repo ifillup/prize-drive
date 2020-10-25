@@ -7,7 +7,7 @@
     @include('home.products')
     <div class="main-container">
     @include('home.feature')
-    <div class="d-flex m-2">
+    <div class="d-flex m-2 flex-wrap">
         <a class='action-btn'>Hot</a>
         <a class='action-btn'>New</a>
         <a class='action-btn'>Electronics</a>

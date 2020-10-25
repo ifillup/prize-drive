@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Inventory</h1>
-<section class="box-list rounded">
+<h3>Account Information</h3>
+<h4>Username: {{auth()->user()->name}}</h4>
+<h4>Email: {{auth()->user()->email}}</h4>
+<h4>Shipping Address: Add Shipping Address</h4>
+
+<h3>Inventory</h3>
+<section class="box-list inventory-list ">
 
 @isset(auth()->user()->inventory)
 

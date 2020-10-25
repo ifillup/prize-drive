@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/account', 'InventoryController@show');
+Route::get('/account', 'InventoryController@show')->middleware('auth');
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/products', 'ProductController@store');
 Route::get('/admin/products', 'ProductController@index');
