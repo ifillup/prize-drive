@@ -13,32 +13,22 @@ class ProductController extends Controller
 
     public function store()
     {
-
         $data = request()->validate([
             'name' => 'required',
             'cost' => 'required',
             'description' => 'required',
             'image' => ['required', 'image']
         ]);
-
         $image = Image::make(request('image'))->fit(400, 400)->encode('png');
-
         $filePath = 'uploads/' . uniqid('prod') . '.png';
         Storage::disk('s3')->put($filePath, $image);
-
-
         $product = new Product([
             'name' => $data['name'],
             'cost' => $data['cost'],
             'description' => $data['description'],
             'image' => $filePath
         ]);
-
         $product->save();
-
-
-
-
         return redirect('/admin/products');
     }
     public function index()

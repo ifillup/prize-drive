@@ -6,7 +6,7 @@
                     <img src="{{env('AWS_URL').'/'.$box->image}}" class="" alt="...">
                 </a>
                 <span class="">{{$box->name}}</span>
-                <a href="{{url('show/'.$box->id)}}" class="buy-btn">$ {{$box->price}}</a>
+                <a href="{{url('show/'.$box->id)}}" class="action-btn">$ {{$box->price}}</a>
             </article>
         @else
             <article class="box box-disabled"   >
