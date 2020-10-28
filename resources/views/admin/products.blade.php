@@ -4,7 +4,6 @@
 <div class="container">
     <form class='bg-light p-2 rounded shadow ' action="{{ secure_url('/admin/products') }}" method="POST" enctype="multipart/form-data">
         @csrf
-
         <h4>Add New Product</h4>
 
             <label for="name" >Product Name</label>
@@ -39,32 +38,23 @@
             <label for="description">Description</label>
             <textarea name='description' class="form-control" id="description" rows="5"></textarea>
         </div>
-
-
-
-        <input type="submit" value="Add Product" class="btn btn-primary mt-1" />
-
-
+    <input type="submit" value="Add Product" class="btn btn-primary mt-1" />
     </form>
-
      <table class="table bg-light table-striped mt-1 rounded shadow ">
         <thead>
-        <tr>
-
-            <th scope="col">Product Name</th>
-            <th scope="col">Cost</th>
-            <th scope="col">Description</th>
-        </tr>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Description</th>
+            </tr>
         </thead>
         <tbody>
             @foreach($products as $product)
             <tr>
-
-            <td>{{$product->name}}</td>
-            <td>{{$product->cost}}</td>
-            <td>{{$product->description}}</td>
-
-        </tr>
+                <td>{{$product->name}}</td>
+                <td>{{$product->cost}}</td>
+                <td>{{$product->description}}</td>
+            </tr>
         @endforeach
         </tbody>
     </table>

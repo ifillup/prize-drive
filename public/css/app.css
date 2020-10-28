@@ -11230,8 +11230,8 @@ main,
 }
 
 .open {
-  -webkit-animation: open 1s 3;
-          animation: open 1s 3;
+  -webkit-animation: open 500ms 3;
+          animation: open 500ms 3;
   display: block;
   top: 75px;
   left: 40px;

@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
                 <li class="nav-item">
                     <a class="nav-link" href="/">
                         <i class="fas fa-box-open"></i>
@@ -77,13 +76,10 @@
 
                     @endif
                     <li class="nav-item">
-
-
                         <div class="d-flex rounded-pill ml-5 p-2 nav-badge">
                             <img src="https://prizedrive.s3-ap-southeast-2.amazonaws.com/assets/user.jpg" style="height: 50px;" class="rounded-circle">
                     <div class="">
-                            <p class="mb-0 ml-2">{{ Auth::user()->transactions->sum('value')}}</p>
-
+                        <p class="mb-0 ml-2">{{ Auth::user()->transactions->sum('value')}}</p>
                         <a class="btn">DEPOSIT</a>
                     </div>
                         </div>

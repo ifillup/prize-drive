@@ -44,13 +44,10 @@
         </div>
         <input type="submit" value="Add Item" class="btn btn-primary" />
     </form>
-
 </div>
-
 
 <div class="">
     @foreach ($boxes as $box)
-
         <div class="bg-light m-2 p-2 rounded border">
             <div class="d-flex justify-content-between" >
             <div class="">
@@ -85,24 +82,19 @@
             </div>
         </div>
             @if (count($box->prizes) > 0)
-
-
             <table class="table bg-light table-striped rounded m-2 shadow ">
                 <thead>
                 <tr>
-
                     <th scope="col">Product Name</th>
                     <th scope="col">Drop %</th>
                     <th scope="col">Cost</th>
                     <th scope="col">Cost per box</th>
                     <th scope="col">Edit Drop %</th>
-
                 </tr>
                 </thead>
                 <tbody>
                     @foreach($box->prizes as $prize)
                     <tr>
-
                         <td>{{ $prize->product->name}}</td>
                         <td>{{ $prize->percentage}}</td>
                         <td>{{ $prize->product->cost}}</td>
@@ -115,15 +107,12 @@
                                 <input type="number" min="0" max="100" name="percentage" id="">
                                 <button class="btn btn-primary btn-sm" type="submit" >Edit</button>
                             </form>
-
                         </td>
-
                     </tr>
                 @endforeach
                 </tbody>
             </table>
             @endif
-
         </div>
     @endforeach
 </div>

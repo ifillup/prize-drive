@@ -11,7 +11,6 @@
 
 @isset(auth()->user()->inventory)
 
-
 @foreach (auth()->user()->inventory as $item)
 <div class="inventory box">
 <img src="{{env('AWS_URL').'/'. $item->product->image }}" alt="">

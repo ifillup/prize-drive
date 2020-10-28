@@ -6,17 +6,10 @@
     @if (isset($product))
      @include('home.open')
     @else ()
-
         <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
         <a href="{{url('open/'.$box->id)}}" id="open-btn" class="btn btn-outline-primary open-btn"  >Buy for ${{$box->price}}</a>
-    {{-- @else
-    <img src="{{env('AWS_URL').'/'.$box->image}}" alt="" srcset="">
-    <a href="{{ route('login') }}" id="open-btn" class="btn btn-outline-primary open-btn"  >Login to buy ${{$box->price}}</a> --}}
     @endif
 </div>
-
-
-
     <button id="show-drops" class="btn">show drops %</button>
     <section class="product-list box-list">
         @foreach ($box->prizes as $prize)
