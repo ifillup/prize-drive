@@ -1,6 +1,5 @@
 <h4 class='align-self-center mb-2'>featured boxes</h4>
 <div class="feature">
-
     @foreach($boxes as $box)
     @if ($box->prizes->isNotEmpty())
         <article id="{{$box->id}}" class="featured"   >
